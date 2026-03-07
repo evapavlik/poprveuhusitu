@@ -9,8 +9,10 @@ Tento projekt je veřejná landing page Církve československé husitské, urč
 - **Organizace:** Církev československá husitská (CČSH)
 - **Web organizace:** https://www.ccsh.cz
 - **Cílová skupina:** hledající, lidé bez vyznání, laici zvažující první návštěvu, lidé zajímající se o českou historii a spiritualitu
-- **Tón:** otevřený, přívětivý, intelektuálně upřímný — bez zbytečného církevního žargonu, bez přehnaného evangelizačního tlaku
+- **Tón:** otevřený, přívětivý, intelektuálně upřímný — bez zbytečného církevního žargonu, bez přehnaného evangelizačního tlaku, ale s teologickým ukotvením (nejde o volnomyšlenkářský spolek)
 - **Jazyk:** čeština
+- **GitHub:** https://github.com/evapavlik/poprveuhusitu
+- **Stav:** v1 hotová, pushnutá na GitHub, připravená k nasazení na Vercel
 
 ---
 
@@ -35,6 +37,16 @@ https://www.ccsh.cz/aktualne.html           # aktuální dění (pro sekci Dnes)
 ```
 https://www.ccshpraha.cz/karel-farsky.html  # biografie, teologie, citáty
 ```
+
+### 4. Karel Farský — brožura 1925 (PDF, skenovaný)
+- **Lokální soubor:** `/Users/evapavlikova/Documents/Husitská teologie/Hotové předměty/Dějiny teologie a teologické filozofie CČSH/Karel Farský/FARSKÝ. CČS.pdf`
+- Plný název: *CČS — Stručné informace o náboženských názorech, úkolech a organisaci církve československé* (K. Farský, 1925)
+- 34 stran, skenovaný dokument (nutno číst jako obrázky přes pdftoppm)
+- Obsahuje: Farského vlastní formulace víry, pohled na vědu, ekumenismus, sociální službu
+- **Klíčové citáty vytěžené pro budoucí použití:**
+  - „Dokazovati Boha nelze. Pojem Boha vymyká se lidskému pomyslu." (s. 3)
+  - „V CČS směřuje naprosto a bez jakýchkoliv výhrad k svobodě vědy." (s. 30)
+  - Husův citát, který Farský přejímá: „Poznej pravdu, hledej pravdu…" (s. 33)
 
 **Workflow pro psaní obsahu:**
 1. Načti příslušnou stránku/dokument
@@ -82,11 +94,11 @@ Speciální citáty:   Cormorant Garamond — italika pro velké citáty (Google
 ### 1. `<nav>` — Navigace
 - Fixní, bílá s backdrop-filter blur
 - Logo: „Husitská církev · CČSH" v Loře, červená
-- Odkazy: Co jsme / Karel Farský / Bohoslužba / Dnes / Kontakt
+- Odkazy: Kdo jsme / Karel Farský / Bohoslužba / Dnes / Kontakt
 
 ### 2. `<hero>` — Hero sekce
 - Tag badge: „Církev československá husitská"
-- H1: „Víra, která se nebojí otázek." (nebo variace — ověřit, zda odpovídá duchu CČSH)
+- H1: „Víra, která se nebojí otázek."
 - Perex: krátký, přívětivý, pro hledající
 - CTA tlačítka: „Poznejte nás" (primary) + „Jak vypadá bohoslužba" (ghost)
 - Pozadí: off-white s jemnými radiálními gradienty (červená + sage)
@@ -95,8 +107,8 @@ Speciální citáty:   Cormorant Garamond — italika pro velké citáty (Google
 - Červené pozadí, bílý text
 - Obsah: Otevřenost · Bohoslužba v češtině od roku 1920 · Jan Hus · Karel Farský · Přijímání pro všechny pokřtěné · Česká reformace
 
-### 4. `#co-jsme` — Co jsme (2 sloupce)
-- **Vlevo:** H2 + 2 odstavce o identitě církve (čerpat z kdo-jsme.html)
+### 4. `#co-jsme` — Kdo jsme (2 sloupce)
+- **Vlevo:** H2 + 2 odstavce o identitě církve
 - **Vpravo:** 4 pilíře číslované (01–04)
   - Svoboda svědomí
   - Otevřené přijímání
@@ -105,33 +117,46 @@ Speciální citáty:   Cormorant Garamond — italika pro velké citáty (Google
 
 ### 5. `#farsky` — Karel Farský (příběh vzniku)
 - Velký nadpis, subtitle s daty
-- Intro odstavec o Farském
-- **Timeline:** 1919 / 1920 / 1922 / 1924 — čerpat z ccshpraha.cz/karel-farsky.html a ccsh.cz/historie.html
+- Intro odstavec o Farském (duchovní linie Hus → Chelčický → Komenský → Farský)
+- **Timeline:** Velikonoce 1919 / Vánoce 1919 / 1920 / 1922 / 1924
 
 ### 6. Citátová sekce
 - Sage zelené pozadí
 - Velký italický citát Farského v Cormorant Garamond
-- Zdroj citátu
+- Aktuální citát: „Člověk není na světě, aby činil zlé, nýbrž aby žil pro dobro, a tak plnil věčný zákon Boží, řídící vesmír."
+- ⚠️ **Citát dosud bez ověřeného zdroje** — před publikací ověřit přesný původ
 
-### 7. `#bohosluzba` — Co vás čeká poprvé (6 karet)
-- **OBSAH POVINNĚ z PDF průvodce** — projít dokument a vytěžit
-- 6 karet: atmosféra / kázání / přijímání / zpěv / modlitba / nezapojování
+### 7. `#bohosluzba` — Co vás čeká poprvé (4 karty)
+- 4 karty: neformální atmosféra / kázání v živém jazyce / přijímání otevřené všem / nemusíte se zapojovat
 
 ### 8. `#dnes` — Proč dnes (2 sloupce)
 - **Vlevo:** text o současnosti Farského myšlenek
-- **Vpravo:** 4 témata v sage-pale boxu (pravda / odpuštění / víra+věda / chudá církev)
+- **Vpravo:** 4 témata v sage-pale boxu:
+  - Pravda jako odvaha
+  - Odpuštění ve třech krocích
+  - Víra a věda společně
+  - Bez okázalosti
 
 ### 9. Průvodce první návštěvou (4 kroky)
-- **OBSAH POVINNĚ z PDF průvodce**
-- Krok 01–04: příchod / čtení+kázání / eucharistie / závěr
+- Krok 01–04: příchod kněze / čtení a kázání / přijímání / závěr a oznámení
 
-### 10. `#kontakt` — CTA sekce
-- Světle červené pozadí (red-pale)
-- H2 + perex + tlačítko → ccsh.cz (najít náboženskou obec)
+### 10. FAQ — Časté otázky (accordion)
+- 6 otázek pro hledající (víra, oblečení, děti, čas, komunita, zapojení)
+- Bílé pozadí, accordion s animací
 
-### 11. Footer
+### 11. Životní události (4 karty)
+- Sage-pale pozadí, SVG ikony v sage barvě
+- 4 karty: křest / svatba / pohřeb / rozhovor s farářem
+
+### 12. `#kontakt` — CTA sekce
+- Brick-pale pozadí
+- H2 + perex + tlačítko → ccsh.cz („Najít sbor blízko vás")
+
+### 13. Footer
 - Tmavý, jednoduchý
-- Logo text + ccsh.cz odkaz
+- Logo text „Husitská církev · CČSH"
+- Disclaimer: „Soukromý projekt · Není oficiální stránkou CČSH" (odkaz na ccsh.cz)
+- ⚠️ **Žádné ®, ©, ani adresa sídla** — tohle je soukromá iniciativa, ne oficiální web
 
 ---
 
@@ -148,39 +173,62 @@ CMS:          (volitelně v další fázi) Sanity.io nebo Contentful
 ### Struktura souborů
 ```
 app/
-  page.tsx              # hlavní landing page
+  page.tsx              # hlavní landing page — řadí všechny sekce
   layout.tsx            # fonty, metadata
-  globals.css           # CSS proměnné, base styles
+  globals.css           # CSS proměnné, base styles, marquee animace
 components/
-  Nav.tsx
-  Hero.tsx
-  MarqueeBand.tsx
-  WhoWeAre.tsx
-  KarelFarsky.tsx
-  Quote.tsx
-  FirstVisit.tsx
-  Contemporary.tsx
-  ServiceGuide.tsx
-  CtaSection.tsx
-  Footer.tsx
+  Nav.tsx               # fixní navigace
+  Hero.tsx              # hero sekce s CTA
+  MarqueeBand.tsx       # červený marquee pás
+  WhoWeAre.tsx          # identita církve (2 sloupce + pilíře)
+  KarelFarsky.tsx       # příběh vzniku + timeline
+  Quote.tsx             # citátová sekce (sage pozadí)
+  FirstVisit.tsx        # co vás čeká poprvé (4 karty)
+  Contemporary.tsx      # proč dnes (2 sloupce + témata)
+  ServiceGuide.tsx      # průvodce bohoslužbou (4 kroky)
+  FAQ.tsx               # časté otázky (accordion)
+  LifeEvents.tsx        # životní události (4 karty)
+  CtaSection.tsx        # závěrečné CTA
+  Footer.tsx            # patička
+  FadeUp.tsx            # animační wrapper (IntersectionObserver)
 public/
-  (obrázky, ikony)
+  farsky-portrait.webp  # portrét Karla Farského (stylizovaný CSS filtry)
 CLAUDE.md               # tento soubor
 ```
 
 ---
 
-## Hotový HTML prototyp
+## Pravidla pro texty a terminologii
 
-Máme hotový funkční HTML prototyp (`ccs-husitska.html`) se správnou strukturou a design systémem. Při přepisu do Next.js z něj vycházej — **neměň strukturu ani obsah sekcí**, pouze přepiš do React komponent a doplň obsah ze zdrojů výše.
+### Terminologie — ZÁVAZNÁ
+| ❌ Nepoužívat | ✅ Správně |
+|---|---|
+| Eucharistie | Přijímání |
+| náboženská obec | sbor |
+| kalich (v kontextu přijímání) | víno |
+| pastorační rozhovor | osobní rozhovor |
+| souputníci | spojenci / společně |
+| nekáře | nebude kárat |
+| blahoslavenství (bez kontextu) | konkrétní popis čtení |
+
+### Jazyková pravidla
+- **Žádné archaismy** — text musí být srozumitelný pro člověka, který nikdy nebyl v kostele
+- **Žádné církevní klišé** jako „přijďte k nám domů", „Boží rodina", „služebníci Páně"
+- **Žádný evangelizační tlak** — tón je zvoucí, ne přesvědčovací
+- **Citáty Farského** — vždy ověřit zdroj, nepafrázovat jako přímou řeč
+- **Přijímání** — správná formulace: „může přistoupit každý pokřtěný křesťan, bez ohledu na církev"
+- **Farářky** — zmínit, je to důležitý rozlišovací prvek CČSH
+- **Název církve** — malé „č" a „h": Církev **č**eskoslovenská **h**usitská
+
+### Faktické kontroly
+- **Datum vzniku:** vyhlášena 11. ledna 1920 v chrámu sv. Mikuláše
+- **Karel Farský:** první biskup-patriarcha (ne jen „patriarcha")
+- Červená `#c41e1e` je přesná barva z loga na ccsh.cz — neměnit
 
 ---
 
-## Důležité poznámky
+## Otevřené úkoly
 
-- **Nepsát z hlavy** — vždy čerpat ze zdrojů výše. Obsah musí být věcně přesný.
-- **Nepoužívat církevní klišé** jako „přijďte k nám domů" nebo „Boží rodina" — tón je intelektuálně upřímný
-- **Citáty Farského** — vždy ověřit zdroj, nepafrázovat jako přímou řeč
-- **Přijímání** — správná formulace: „může přistoupit každý pokřtěný, bez ohledu na příslušnost k církvi"
-- **Farářky** — zmínit, je to důležitý rozlišovací prvek CČSH
-- Červená `#c41e1e` je přesná barva z loga na ccsh.cz — neměnit
+- [ ] **Ověřit zdroj citátu v Quote.tsx** — „Člověk není na světě, aby činil zlé…" — atribuce „Karel Farský" bez konkrétního dokumentu
+- [ ] **Nasazení na Vercel** — propojit GitHub repo s Vercel
+- [ ] **Fotografie** — zvážit přidání fotografií sborů / bohoslužeb do sekcí (nyní je stránka čistě textová + ikony)
