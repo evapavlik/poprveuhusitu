@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --white: #ffffff;
+  --off-white: #faf8f5;
+  --cream: #f4f0ea;
+  --text: #1f1a16;
+  --text-muted: #6b6259;
+  --text-light: #9e968e;
+  --brick: #c41e1e;
+  --brick-light: #d63030;
+  --brick-pale: #fdf0f0;
+  --sage: #4a7c6f;
+  --sage-light: #6ba396;
+  --sage-pale: #eaf3f1;
+  --sand: #d4c4a8;
+  --border: #e8e0d5;
+  --border-strong: #d0c4b4;
+}
+
+@theme inline {
+  --font-lora: var(--font-lora);
+  --font-jakarta: var(--font-jakarta);
+  --font-cormorant: var(--font-cormorant);
+
+  --color-white: var(--white);
+  --color-off-white: var(--off-white);
+  --color-cream: var(--cream);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-light: var(--text-light);
+  --color-brick: var(--brick);
+  --color-brick-light: var(--brick-light);
+  --color-brick-pale: var(--brick-pale);
+  --color-sage: var(--sage);
+  --color-sage-light: var(--sage-light);
+  --color-sage-pale: var(--sage-pale);
+  --color-sand: var(--sand);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+}
+
+body {
+  background: var(--white);
+  color: var(--text);
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Fade-up animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
