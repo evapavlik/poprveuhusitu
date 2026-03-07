@@ -14,7 +14,7 @@ export default function CtaSection() {
         víru, která to unese.
       </p>
       <a
-        href="https://www.ccsh.cz"
+        href="https://www.ccsh.cz/mapka.html"
         className="bg-brick text-white font-jakarta text-sm font-semibold px-8 py-4 rounded-md no-underline inline-block hover:bg-brick-light hover:-translate-y-px transition-all duration-200"
         target="_blank"
         rel="noopener noreferrer"
