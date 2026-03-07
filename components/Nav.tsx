@@ -7,9 +7,9 @@ export default function Nav() {
       <ul className="hidden md:flex gap-9 list-none">
         {[
           { href: "#co-jsme", label: "Kdo jsme" },
-          { href: "#farsky", label: "Karel Farský" },
-          { href: "#bohosluzba", label: "Bohoslužba" },
-          { href: "#dnes", label: "Dnes" },
+          { href: "#farsky", label: "Příběh vzniku" },
+          { href: "#bohosluzba", label: "Na bohoslužbě" },
+          { href: "#dnes", label: "Proč dnes" },
           { href: "#kontakt", label: "Kontakt" },
         ].map((link) => (
           <li key={link.href}>

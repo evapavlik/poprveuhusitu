@@ -12,7 +12,8 @@ Tento projekt je veřejná landing page Církve československé husitské, urč
 - **Tón:** otevřený, přívětivý, intelektuálně upřímný — bez zbytečného církevního žargonu, bez přehnaného evangelizačního tlaku, ale s teologickým ukotvením (nejde o volnomyšlenkářský spolek)
 - **Jazyk:** čeština
 - **GitHub:** https://github.com/evapavlik/poprveuhusitu
-- **Stav:** v1 hotová, pushnutá na GitHub, připravená k nasazení na Vercel
+- **Vercel:** https://poprveuhusitu.vercel.app
+- **Stav:** v1 nasazená na Vercel, auto-deploy z main větve
 
 ---
 
@@ -230,5 +231,5 @@ CLAUDE.md               # tento soubor
 ## Otevřené úkoly
 
 - [ ] **Ověřit zdroj citátu v Quote.tsx** — „Člověk není na světě, aby činil zlé…" — atribuce „Karel Farský" bez konkrétního dokumentu
-- [ ] **Nasazení na Vercel** — propojit GitHub repo s Vercel
+- [x] **Nasazení na Vercel** — ✅ poprveuhusitu.vercel.app
 - [ ] **Fotografie** — zvážit přidání fotografií sborů / bohoslužeb do sekcí (nyní je stránka čistě textová + ikony)
