@@ -6,7 +6,7 @@ import FadeUp from "./FadeUp";
 const faqs = [
   {
     q: "Musím věřit v Boha, abych mohl/a přijít?",
-    a: "Ne. Přicházejí k nám i hledající a pochybující. Bohoslužba je otevřená všem — víra není podmínka vstupu, ale cesta, na kterou se můžete vydat.",
+    a: "Ne. Vůbec. Můžete být zcela nevěřící, můžete mít pochybnosti, můžete si jen chtít poslechnout, jak taková bohoslužba vypadá. Nikdo se vás nebude ptát, co věříte. Jste vítáni tak, jak jste.",
   },
   {
     q: "Co si mám obléct?",

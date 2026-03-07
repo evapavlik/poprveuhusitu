@@ -20,8 +20,9 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg font-light leading-[1.75] text-text-muted max-w-[520px] mb-13">
-          Přicházíme z tradice Jana Husa a české reformace. Jsme otevřená, moderní církev
-          — pro ty, kdo hledají, pochybují i věří.
+          Husitská církev je otevřená všem — těm, kdo hledají
+          společenství, kdo si kladou otázky, i těm, kdo si zatím nejsou
+          jistí vůbec ničím.
         </p>
 
         <div className="flex gap-4 flex-wrap items-center">

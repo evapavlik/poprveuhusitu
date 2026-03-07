@@ -10,6 +10,7 @@ import ServiceGuide from "@/components/ServiceGuide";
 import CtaSection from "@/components/CtaSection";
 import FAQ from "@/components/FAQ";
 import LifeEvents from "@/components/LifeEvents";
+import AboutProject from "@/components/AboutProject";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       <ServiceGuide />
       <FAQ />
       <LifeEvents />
+      <AboutProject />
       <CtaSection />
       <Footer />
     </>

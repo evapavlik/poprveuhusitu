@@ -31,7 +31,7 @@ const cards = [
   {
     icon: icons.candle,
     title: "Neformální atmosféra",
-    text: "Nemusíte nic umět, nic znát. Zpěvník je k dispozici. Bohoslužba má svůj řád, ale nikdy není strojená — je to setkání, ne výkon.",
+    text: "Nemusíte nic umět, nic znát. Zpěvník je k dispozici. Bohoslužba má svůj řád, ale atmosféra je vřelá a lidská.",
   },
   {
     icon: icons.book,
