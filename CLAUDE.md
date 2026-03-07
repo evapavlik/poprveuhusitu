@@ -14,6 +14,7 @@ Tento projekt je veřejná landing page Církve československé husitské, urč
 - **GitHub:** https://github.com/evapavlik/poprveuhusitu
 - **Vercel:** https://poprveuhusitu.vercel.app
 - **Stav:** v1 nasazená na Vercel, auto-deploy z main větve
+- **Git workflow:** Nikdy nepushovat přímo do main. Vždy vytvořit feature větev a PR přes `gh pr create`.
 
 ---
 
