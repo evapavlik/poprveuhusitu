@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lora, Plus_Jakarta_Sans, Cormorant_Garamond } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const lora = Lora({
@@ -39,6 +40,7 @@ export default function RootLayout({
         className={`${lora.variable} ${plusJakarta.variable} ${cormorant.variable} font-jakarta antialiased overflow-x-hidden`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
