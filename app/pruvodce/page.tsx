@@ -7,7 +7,11 @@ export const metadata: Metadata = {
     "Krok za krokem celou bohoslužbou CČSH. Otevřete si na mobilu přímo v lavici.",
 };
 
-const sections = [
+const sections: {
+  name: string;
+  desc: string;
+  steps: { title: string; text: string; note?: string; tip?: string }[];
+}[] = [
   {
     name: "Úvod k bohoslužbě",
     desc: "Příprava a soustředění",
