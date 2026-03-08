@@ -12,37 +12,42 @@ const steps = [
     num: "01",
     title: "Příchod kněze",
     text: "Lidé povstanou na znamení pozdravu. Nemusíte — nikdo si toho nevšimne.",
+    note: "vstává se",
   },
   {
     num: "02",
-    title: "Doznání vin",
-    text: "Chvíle ticha, kdy se každý zastaví sám u sebe. Pak společné doznání vin. Pokud přiznáváme své chyby a litujeme jich, můžeme prožít milost odpuštění.",
+    title: "Doznání hříchů a vin",
+    text: "Kněz vyzve ke chvíli ticha a pohledu do vlastního svědomí. Pak společné doznání vin. Pokud přiznáváme své chyby a litujeme jich, můžeme prožít milost Božího odpuštění.",
   },
   {
     num: "03",
     title: "První čtení z Bible",
-    text: "Kněz nebo lektor přečte úryvek ze Starého nebo Nového zákona.",
+    text: "Kněz nebo lektor přečte úryvek z Bible — většinou ze Starého zákona.",
   },
   {
     num: "04",
     title: "Přímluvné modlitby",
-    text: 'Zaznívají díky, chvály a prosby. Na modlitby se společně odpovídá slovy „Smiluj se, Hospodine" nebo „Kyrie eleison". Slovo AMEN znamená „staň se".',
+    text: 'Zaznívají díky, chvály a prosby. Obec odpovídá krátkými modlitebními zvoláními — česky, řecky nebo staroslověnsky. Slovo AMEN znamená „staň se".',
+    tip: 'Kyrie eleison = Pane, smiluj se (řecky). Gospodi pomiluj = totéž staroslověnsky. Smiluj se, Hospodine = česky.',
   },
   {
     num: "05",
     title: "Druhé čtení z Bible",
-    text: "Další úryvek z Písma — obvykle z jiné části než první čtení.",
+    text: "Další úryvek z Písma — většinou z Nového zákona (epištoly).",
+    tip: "Epištoly jsou dopisy apoštolů prvním křesťanským obcím. Nejznámější jsou listy apoštola Pavla.",
   },
   {
     num: "06",
     title: "Blahoslavenství",
     text: "Připomínka toho, jak bychom měli žít. Zpívá se nebo recituje. Mění se podle období liturgického roku.",
+    tip: 'Blahoslavenství pochází z Ježíšova Kázání na hoře. Začíná slovy „Blahoslavení chudí duchem…" — tedy ti, kdo nespoléhají jen na sebe.',
   },
   {
     num: "07",
     title: "Evangelium",
     text: "Lidé povstanou. Kněz čte z evangelia podle Matouše, Marka, Lukáše nebo Jana. Po čtení se usedá.",
     note: "vstává se",
+    tip: "Slovo evangelium pochází z řeckého euangelion = dobrá zpráva. Povstání je projevem úcty k Ježíšovým slovům.",
   },
   {
     num: "08",
@@ -53,29 +58,34 @@ const steps = [
     num: "09",
     title: "Vyznání víry",
     text: "Společná odpověď — vyjadřuje, v koho věříme a ke komu upínáme svou naději.",
+    tip: "CČSH má vlastní Velké vyznání víry, které formuloval Karel Farský. Příležitostně se používá i Apoštolské nebo Nicejsko-cařihradské vyznání.",
   },
   {
     num: "10",
     title: "Obětování a chvalozpěv",
     text: 'Kněz připraví chléb a víno. Připomínáme si oběť Ježíše Krista za nás. Vděčnost vyjadřujeme chvalozpěvem „Svatý, svatý, svatý".',
+    tip: "Kněz smísí víno s vodou — tento zvyk sahá až k nejstarším křesťanským obcím. Už ve 2. století se při bohoslužbě používal chléb a kalich vína smíšeného s vodou.",
   },
   {
     num: "11",
     title: "Eucharistická modlitba",
     text: "Lidé povstanou. Velká modlitba díků za zjevení Boží milosti. Následuje zpřítomnění poslední večeře Ježíše s učedníky — kněz pozvedá hostii a kalich s vínem. Po zpřítomnění se usedá.",
     note: "vstává se",
+    tip: 'Eucharistie = řecky eu (dobře) + chairein (radovat se). Doslova „díkůvzdání". Jde o zpřítomnění — ne opakování — poslední večeře.',
   },
   {
     num: "12",
     title: "Otčenáš",
     text: "Lidé povstanou. Modlitba, kterou naučil své učedníky Ježíš Kristus. Sjednocuje křesťany po celém světě.",
     note: "vstává se",
+    tip: 'Otčenáš = Modlitba Páně. Začíná slovy „Otče náš, který jsi v nebesích…" Text najdete ve zpěvníku.',
   },
   {
     num: "13",
     title: "Přijímání",
     text: "K přijímání může přistoupit každý pokřtěný křesťan, bez rozdílu církevní příslušnosti. Kněz podává hostii (chléb) namočenou ve víně. Děti a ti, kdo nechtějí přistoupit, dostanou požehnání — křížek na čelo.",
     note: "otevřené všem pokřtěným",
+    tip: 'Přijímání „pod obojí" (chléb i víno) je základní znak husitské tradice — od dob Jana Husa. Hostie je nekvašený chléb.',
   },
   {
     num: "14",
@@ -147,6 +157,18 @@ export default function PruvodcePage() {
                   <p className="text-[13px] font-light leading-[1.75] text-text-muted">
                     {step.text}
                   </p>
+                  {step.tip && (
+                    <div className="mt-3 bg-brick-pale/50 rounded-lg px-3.5 py-2.5 flex items-start gap-2">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 text-brick/40 shrink-0 mt-0.5">
+                        <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                        <path d="M9 18h6" />
+                        <path d="M10 22h4" />
+                      </svg>
+                      <p className="text-[12px] leading-[1.7] text-text-muted/80 italic">
+                        {step.tip}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -169,8 +191,10 @@ export default function PruvodcePage() {
 
         <p className="text-[11px] text-text-muted/50 leading-relaxed">
           Podle letáku{" "}
-          <em>Poprvé na bohoslužbě</em>{" "}
-          — pastorační komise ÚR CČSH
+          <em>Poprvé na bohoslužbě</em> (pastorační komise ÚR CČSH)
+          <br />
+          a{" "}
+          <em>Liturgie CČSH podle patriarchy Karla Farského</em>
         </p>
 
         <Link
