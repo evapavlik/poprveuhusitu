@@ -1,3 +1,4 @@
+import Link from "next/link";
 import FadeUp from "./FadeUp";
 
 const steps = [
@@ -60,6 +61,18 @@ export default function ServiceGuide() {
           </FadeUp>
         ))}
       </div>
+
+      <FadeUp>
+        <div className="mt-10 text-center">
+          <Link
+            href="/pruvodce"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-brick no-underline hover:text-brick-light transition-colors"
+          >
+            Podrobný průvodce bohoslužbou
+            <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </FadeUp>
     </section>
   );
 }
