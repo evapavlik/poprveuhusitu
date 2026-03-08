@@ -165,7 +165,7 @@ export default function PruvodcePage() {
 
         <div className="bg-sage-pale border border-sage/15 rounded-xl px-5 py-4">
           <p className="text-[13px] leading-[1.75] text-sage font-medium">
-            💡 Zpěvník máte k dispozici v lavici. Text celé bohoslužby
+            💡 Zpěvník máte k dispozici v lavici nebo u vchodu. Text celé bohoslužby
             s odpověďmi najdete od strany 633. Nemusíte se aktivně zapojovat — stačí být.
           </p>
         </div>
