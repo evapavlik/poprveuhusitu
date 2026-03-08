@@ -158,8 +158,9 @@ export default function PruvodcePage() {
         </h1>
 
         <p className="text-[15px] font-light leading-[1.8] text-text-muted mb-6">
-          Krok za krokem celou bohoslužbou Církve československé husitské.
-          Otevřete si na mobilu přímo v lavici.
+          Bohoslužba má svůj vnitřní příběh. Začíná ztišením
+          a pohledem do sebe, pokračuje nasloucháním textům z Bible
+          a kázání, a vrcholí společným přijímáním.
         </p>
 
         <div className="bg-sage-pale border border-sage/15 rounded-xl px-5 py-4">
