@@ -41,7 +41,7 @@ const steps = [
   {
     num: "07",
     title: "Evangelium",
-    text: "Lidé povstanou. Kněz čte z evangelia podle Matouše, Marka, Lukáše nebo Jana.",
+    text: "Lidé povstanou. Kněz čte z evangelia podle Matouše, Marka, Lukáše nebo Jana. Po čtení se usedá.",
     note: "vstává se",
   },
   {
@@ -62,12 +62,14 @@ const steps = [
   {
     num: "11",
     title: "Eucharistická modlitba",
-    text: "Velká modlitba díků za zjevení Boží milosti v dějinách lidstva. Následuje zpřítomnění poslední večeře Ježíše s učedníky. Kněz pozvedá hostii a kalich s vínem.",
+    text: "Lidé povstanou. Velká modlitba díků za zjevení Boží milosti. Následuje zpřítomnění poslední večeře Ježíše s učedníky — kněz pozvedá hostii a kalich s vínem. Po zpřítomnění se usedá.",
+    note: "vstává se",
   },
   {
     num: "12",
     title: "Otčenáš",
-    text: "Modlitba, kterou naučil své učedníky Ježíš Kristus. Sjednocuje křesťany po celém světě.",
+    text: "Lidé povstanou. Modlitba, kterou naučil své učedníky Ježíš Kristus. Sjednocuje křesťany po celém světě.",
+    note: "vstává se",
   },
   {
     num: "13",
@@ -78,7 +80,8 @@ const steps = [
   {
     num: "14",
     title: "Požehnání",
-    text: "Závěrečné požehnání do každodenního života — s přáním Boží ochrany a pomoci.",
+    text: "Lidé povstanou. Závěrečné požehnání do každodenního života — s přáním Boží ochrany a pomoci. Po požehnání se usedá.",
+    note: "vstává se",
   },
   {
     num: "15",
