@@ -36,7 +36,7 @@ const events = [
   {
     icon: icons.rings,
     title: "Svatba",
-    text: "Sňatek před Bohem i před zákonem. Církevní sňatek v CČSH je platný i občansky.",
+    text: "Církevní sňatek v CČSH je platný i občansky — nemusíte na úřad. Oddávat mohou i farářky.",
   },
   {
     icon: icons.dove,
