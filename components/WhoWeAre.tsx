@@ -4,22 +4,22 @@ const pillars = [
   {
     num: "01",
     title: "Svoboda svědomí",
-    text: "Věříme, že víra je osobní cesta. Nikoho nesoudíme, nikoho nenutíme. Pochybnosti jsou součástí hledání — nejen slabostí.",
+    text: "Věříme, že víra je osobní cesta — ne soubor pravidel, která musíte přijmout celá. Pochybnosti nepotlačujeme. Karel Farský napsal, že víra a věda si neodporují. To platí od roku 1920 dodnes.",
   },
   {
     num: "02",
     title: "Otevřené přijímání",
-    text: "K přijímání může přistoupit každý pokřtěný křesťan, bez ohledu na příslušnost k církvi.",
+    text: "K přijímání může přistoupit každý pokřtěný křesťan — bez ohledu na to, ke které církvi patří. V mnoha církvích to možné není.",
   },
   {
     num: "03",
     title: "Živé kázání",
-    text: "Kázání není výčet dogmat. Je to rozhovor Bible s naším životem — s tím, co nás bolí, trápí i raduje dnes.",
+    text: "Bohoslužba se u nás koná v češtině od roku 1920. Kázání není výčet dogmat — je to rozhovor s tím, co nás trápí, raduje i bolí dnes.",
   },
   {
     num: "04",
     title: "Farářky i faráři",
-    text: "Jsme jednou z mála církví v Česku, kde mohou sloužit ženy jako plnohodnotné kněžky. Celibát není povinný.",
+    text: "Ženy u nás slouží jako farářky od roku 1947 — dávno před většinou církví v Evropě. Naši duchovní žijí běžný život: mají rodiny, děti, partnerské vztahy. Celibát není podmínkou.",
   },
 ];
 
