@@ -262,8 +262,15 @@ function renderText(text: string) {
 }
 
 export default function OtcenasPage() {
-  const [mode, setMode] = useState<'calm' | 'mag'>('calm');
+  const [mode, setMode] = useState<'calm' | 'mag'>('mag');
   const [currentProsba, setCurrentProsba] = useState(0);
+
+  const goToProsba = (index: number) => {
+    setCurrentProsba(index);
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
+  };
 
   const prosba = prosby[currentProsba];
 
@@ -311,7 +318,7 @@ export default function OtcenasPage() {
         {prosby.map((_, i) => (
           <button
             key={i}
-            onClick={() => setCurrentProsba(i)}
+            onClick={() => goToProsba(i)}
             className={`h-2 rounded-full transition-all ${
               i === currentProsba ? 'w-6 bg-stone-700' : 'w-2 bg-stone-300'
             }`}
@@ -490,7 +497,7 @@ export default function OtcenasPage() {
       {/* Navigation */}
       <nav className="border-t border-stone-200 bg-white px-6 py-4 flex items-center justify-between">
         <button
-          onClick={() => setCurrentProsba(Math.max(0, currentProsba - 1))}
+          onClick={() => goToProsba(Math.max(0, currentProsba - 1))}
           disabled={currentProsba === 0}
           className="px-5 py-2.5 rounded-lg border border-stone-200 text-sm font-sans text-stone-500 disabled:opacity-30"
         >
@@ -500,7 +507,7 @@ export default function OtcenasPage() {
           {currentProsba + 1} / {prosby.length}
         </span>
         <button
-          onClick={() => setCurrentProsba(Math.min(prosby.length - 1, currentProsba + 1))}
+          onClick={() => goToProsba(Math.min(prosby.length - 1, currentProsba + 1))}
           disabled={currentProsba === prosby.length - 1}
           className="px-5 py-2.5 rounded-lg bg-stone-900 text-white text-sm font-sans disabled:opacity-30"
         >
