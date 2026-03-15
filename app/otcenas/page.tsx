@@ -267,7 +267,9 @@ export default function OtcenasPage() {
 
   const goToProsba = (index: number) => {
     setCurrentProsba(index);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+    });
   };
 
   const prosba = prosby[currentProsba];
