@@ -63,12 +63,20 @@ export default function ServiceGuide() {
       </div>
 
       <FadeUp>
-        <div className="mt-10 text-center">
+        <div className="mt-10 text-center space-y-3">
           <Link
             href="/pruvodce"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-brick no-underline hover:text-brick-light transition-colors"
           >
             Podrobný průvodce bohoslužbou
+            <span aria-hidden="true">→</span>
+          </Link>
+          <br />
+          <Link
+            href="/otcenas"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-sage no-underline hover:text-sage/80 transition-colors"
+          >
+            Výklad Otčenáše — podle biskupa Kováře
             <span aria-hidden="true">→</span>
           </Link>
         </div>

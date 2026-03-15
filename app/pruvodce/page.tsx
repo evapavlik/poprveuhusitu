@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const sections: {
   name: string;
   desc: string;
-  steps: { title: string; text: string; note?: string; tip?: string }[];
+  steps: { title: string; text: string; note?: string; tip?: string; link?: { href: string; label: string } }[];
 }[] = [
   {
     name: "Úvod k bohoslužbě",
@@ -105,6 +105,7 @@ const sections: {
         text: "Lidé povstanou. Modlitba, kterou naučil své učedníky Ježíš Kristus. Sjednocuje křesťany po celém světě.",
         note: "vstává se",
         tip: 'Otčenáš = Modlitba Páně. Začíná slovy „Otče náš, který jsi v nebesích…" Text najdete ve zpěvníku.',
+        link: { href: "/otcenas", label: "Prozkoumat výklad Otčenáše →" },
       },
     ],
   },
@@ -224,6 +225,16 @@ export default function PruvodcePage() {
                               <p className="text-[12px] leading-[1.7] text-text-muted/80 italic">
                                 {step.tip}
                               </p>
+                            </div>
+                          )}
+                          {step.link && (
+                            <div className="mt-3">
+                              <Link
+                                href={step.link.href}
+                                className="inline-flex items-center gap-1 text-[13px] font-medium text-brick no-underline hover:text-brick-light transition-colors"
+                              >
+                                {step.link.label}
+                              </Link>
                             </div>
                           )}
                         </div>
