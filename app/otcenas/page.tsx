@@ -515,6 +515,16 @@ export default function OtcenasPage() {
         </button>
       </nav>
 
+      {/* Cross-link to Království boží */}
+      <div className="text-center py-6 border-t border-stone-100">
+        <a
+          href="/kralovstvi-bozi"
+          className="text-sm font-sans text-[#4a7c6f] hover:text-[#4a7c6f]/70 transition no-underline"
+        >
+          Číst také: Království boží na zemi — Kovářův manifest z roku 1920 →
+        </a>
+      </div>
+
       {/* Source attribution */}
       <footer className="text-center py-8 text-xs text-stone-400 font-sans">
         Podle díla Dr. Františka Kováře „Výklad Otčenáše" (1952)
