@@ -1,4 +1,5 @@
 import FadeUp from "./FadeUp";
+import Link from "next/link";
 
 const themes = [
   {
@@ -51,12 +52,21 @@ export default function Contemporary() {
             </p>
           </FadeUp>
           <FadeUp>
-            <a
-              href="#kontakt"
-              className="bg-brick text-white font-jakarta text-sm font-semibold px-8 py-4 rounded-md no-underline inline-block hover:bg-brick-light hover:-translate-y-px transition-all duration-200"
-            >
-              Přijďte se přesvědčit
-            </a>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="#kontakt"
+                className="bg-brick text-white font-jakarta text-sm font-semibold px-8 py-4 rounded-md no-underline inline-block hover:bg-brick-light hover:-translate-y-px transition-all duration-200"
+              >
+                Přijďte se přesvědčit
+              </a>
+              <Link
+                href="/kralovstvi-bozi"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-sage no-underline hover:text-sage/80 transition-colors"
+              >
+                Jak a proč církev vznikla
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
           </FadeUp>
         </div>
 
