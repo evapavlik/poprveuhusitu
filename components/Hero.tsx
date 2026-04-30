@@ -1,17 +1,18 @@
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-24 pb-16 md:pt-[100px] md:pb-20 bg-off-white relative overflow-hidden">
-      {/* Background gradients */}
-      <div className="absolute -right-[60px] -top-[60px] w-[580px] h-[580px] rounded-full bg-[radial-gradient(circle,rgba(160,65,42,0.09)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute -left-[100px] -bottom-[80px] w-[480px] h-[480px] rounded-full bg-[radial-gradient(circle,rgba(74,124,111,0.08)_0%,transparent_70%)] pointer-events-none" />
+      {/* Atmospheric gradients — softened, spread across full width */}
+      <div className="absolute -right-[140px] -top-[140px] w-[760px] h-[760px] rounded-full bg-[radial-gradient(circle,rgba(160,65,42,0.10)_0%,transparent_65%)] pointer-events-none" />
+      <div className="absolute -left-[160px] -bottom-[120px] w-[640px] h-[640px] rounded-full bg-[radial-gradient(circle,rgba(74,124,111,0.10)_0%,transparent_65%)] pointer-events-none" />
+      <div className="absolute right-[15%] bottom-[20%] w-[420px] h-[420px] rounded-full bg-[radial-gradient(circle,rgba(74,124,111,0.06)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-[760px] relative">
-        <div className="inline-flex items-center gap-2.5 bg-brick-pale text-brick text-xs font-semibold tracking-[0.12em] uppercase px-4 py-2 rounded-full mb-9">
+      <div className="max-w-[1100px] relative">
+        <div className="inline-flex items-center gap-2.5 bg-brick-pale text-brick text-xs font-semibold tracking-[0.12em] uppercase px-4 py-2 rounded-full mb-10">
           <span className="w-1.5 h-1.5 rounded-full bg-brick shrink-0" />
           Církev československá husitská
         </div>
 
-        <h1 className="font-lora text-[clamp(44px,6.5vw,84px)] font-bold leading-[1.08] tracking-tight mb-7">
+        <h1 className="font-lora text-[clamp(48px,9vw,124px)] font-bold leading-[1.04] tracking-tight mb-10">
           Víra, která
           <br />
           se <em className="italic text-brick">nebojí</em>
@@ -19,11 +20,14 @@ export default function Hero() {
           otázek.
         </h1>
 
-        <p className="text-lg font-light leading-[1.75] text-text-muted max-w-[520px] mb-13">
-          Husitská církev je otevřená všem — těm, kdo hledají
-          společenství, kdo si kladou otázky, i těm, kdo si zatím nejsou
-          jistí vůbec ničím.
-        </p>
+        <div className="flex items-stretch gap-6 mb-13 max-w-[680px]">
+          <div className="hidden md:block w-[2px] flex-shrink-0 bg-sage/35 rounded-full" />
+          <p className="text-lg font-light leading-[1.75] text-text-muted">
+            Husitská církev je otevřená všem — těm, kdo hledají
+            společenství, kdo si kladou otázky, i těm, kdo si zatím nejsou
+            jistí vůbec ničím.
+          </p>
+        </div>
 
         <div className="flex gap-4 flex-wrap items-center">
           <a
