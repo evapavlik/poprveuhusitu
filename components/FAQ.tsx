@@ -34,7 +34,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-[100px] px-6 md:px-12 bg-white">
+    <section id="faq" className="py-[100px] px-6 md:px-12 bg-white scroll-mt-20">
       <FadeUp>
         <div className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-brick mb-5 before:content-[''] before:w-5 before:h-0.5 before:bg-brick before:rounded-sm">
           Časté otázky
