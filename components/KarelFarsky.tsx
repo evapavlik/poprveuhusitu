@@ -14,7 +14,7 @@ const timeline = [
   {
     year: "1922",
     title: "Farský jako teolog a myslitel",
-    text: "Společně s Aloisem Kalousem vydává Československý katechismus — věrouku, která chápe vědu a víru ne jako protivníky, ale jako spojence.",
+    text: "Společně s Františkem Kalousem vydává Československý katechismus — věrouku, která chápe vědu a víru ne jako protivníky, ale jako spojence.",
   },
   {
     year: "1924",

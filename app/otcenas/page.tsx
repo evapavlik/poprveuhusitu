@@ -342,7 +342,7 @@ export default function OtcenasPage() {
               />
             </div>
             <p className="text-sm font-medium font-sans tracking-wide" style={{ color: '#4a7c6f' }}>
-              Dr. František Kovář · 1888–1969 · druhý biskup-patriarcha
+              Dr. František Kovář · 1888–1969 · třetí biskup-patriarcha
             </p>
           </div>
           <p className="text-[15px] leading-[1.8] text-stone-500 font-sans">
