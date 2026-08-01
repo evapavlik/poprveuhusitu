@@ -3,14 +3,15 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const links = [
+const sekce = [
   { href: "/#co-jsme", label: "Kdo jsme" },
   { href: "/#farsky", label: "Příběh vzniku" },
   { href: "/#bohosluzba", label: "Na bohoslužbě" },
   { href: "/#dnes", label: "Proč dnes" },
   { href: "/pruvodce", label: "Průvodce bohoslužbou" },
-  { href: "/#kontakt", label: "Přijít" },
 ];
+
+const CTA = { href: "/#kontakt", label: "Najít sbor" };
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -25,23 +26,34 @@ export default function Nav() {
     return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
+  const ctaTrida =
+    "bg-brick text-white text-[13px] font-semibold px-5 py-2.5 rounded-md no-underline whitespace-nowrap hover:bg-brick-light transition-colors duration-200";
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-100 bg-white/93 backdrop-blur-[12px] border-b border-border">
-      <div className="px-6 md:px-12 h-[68px] flex items-center justify-between">
+      {/* Tři sloupce: značka vlevo, sekce doprostřed, akce vpravo. Prostřední
+          sloupec je auto, takže odkazy sedí na optické ose bez ohledu na to,
+          jak široké je logo nebo tlačítko. */}
+      {/* minmax(max-content, 1fr): krajní sloupce se nikdy nezúží pod obsah,
+          takže se logo neláme, ale dokud je místo, zůstávají stejně široké
+          a prostřední sloupec sedí na ose. */}
+      <div className="px-6 lg:px-12 h-[68px] grid grid-cols-[1fr_auto] lg:grid-cols-[minmax(max-content,1fr)_auto_minmax(max-content,1fr)] items-center gap-6">
         <Link
           href="/"
-          className="font-lora text-[15px] font-semibold text-brick no-underline"
+          className="font-lora text-[15px] font-semibold text-brick no-underline justify-self-start whitespace-nowrap"
           onClick={() => setOpen(false)}
         >
           Husitská církev · CČSH
         </Link>
 
-        <ul className="hidden md:flex gap-9 list-none">
-          {links.map((link) => (
+        {/* Plná navigace se zapíná až na lg (1024 px). Na md (768) se šest
+            položek nevešlo a lišta se lámala do dvou řádků. */}
+        <ul className="hidden lg:flex gap-8 list-none justify-self-center">
+          {sekce.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-[13px] font-medium text-text-muted no-underline hover:text-brick transition-colors duration-200"
+                className="text-[13px] font-medium text-text-muted no-underline hover:text-brick transition-colors duration-200 whitespace-nowrap"
               >
                 {link.label}
               </Link>
@@ -49,14 +61,9 @@ export default function Nav() {
           ))}
         </ul>
 
-        {/* Na mobilu je konverzní místo jinak až za třinácti sekcemi. */}
-        <div className="flex items-center gap-3 md:hidden">
-          <Link
-            href="/#kontakt"
-            className="bg-brick text-white text-[12px] font-semibold px-4 py-2 rounded-md no-underline"
-            onClick={() => setOpen(false)}
-          >
-            Najít sbor
+        <div className="flex items-center gap-3 justify-self-end">
+          <Link href={CTA.href} className={ctaTrida} onClick={() => setOpen(false)}>
+            {CTA.label}
           </Link>
           <button
             type="button"
@@ -64,7 +71,7 @@ export default function Nav() {
             aria-expanded={open}
             aria-controls="mobilni-menu"
             aria-label={open ? "Zavřít menu" : "Otevřít menu"}
-            className="w-10 h-10 -mr-2 flex flex-col items-center justify-center gap-[5px] bg-transparent border-none cursor-pointer"
+            className="lg:hidden w-10 h-10 -mr-2 flex flex-col items-center justify-center gap-[5px] bg-transparent border-none cursor-pointer"
           >
             <span
               className={`block w-5 h-[1.5px] bg-text transition-transform duration-200 ${
@@ -88,20 +95,29 @@ export default function Nav() {
       <div
         id="mobilni-menu"
         hidden={!open}
-        className="md:hidden border-t border-border bg-white px-6 py-3"
+        className="lg:hidden border-t border-border bg-white px-6 py-3"
       >
         <ul className="list-none">
-          {links.map((link) => (
+          {sekce.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block py-3 text-[15px] font-medium text-text no-underline border-b border-border last:border-b-0"
+                className="block py-3 text-[15px] font-medium text-text no-underline border-b border-border"
               >
                 {link.label}
               </Link>
             </li>
           ))}
+          <li>
+            <Link
+              href={CTA.href}
+              onClick={() => setOpen(false)}
+              className="block py-3 text-[15px] font-semibold text-brick no-underline"
+            >
+              Přijít
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
