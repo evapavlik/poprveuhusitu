@@ -23,10 +23,26 @@ const cormorant = Cormorant_Garamond({
   style: ["normal", "italic"],
 });
 
+const title = "Husitská církev — pro hledající";
+const description =
+  "Církev československá husitská. Otevřená, moderní církev v tradici Jana Husa a české reformace.";
+
 export const metadata: Metadata = {
-  title: "Husitská církev — pro hledající",
-  description:
-    "Církev československá husitská. Otevřená, moderní církev v tradici Jana Husa a české reformace.",
+  metadataBase: new URL("https://poprveuhusitu.vercel.app"),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    locale: "cs_CZ",
+    siteName: "Husitská církev — pro hledající",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({
@@ -36,6 +52,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs" className="scroll-smooth">
+      <head>
+        {/* Bez JS by IntersectionObserver nikdy nesundal opacity:0 a ze stránky
+            by zbyl jen hero. */}
+        <noscript>
+          <style>{`.fade-up{opacity:1 !important;transform:none !important}`}</style>
+        </noscript>
+      </head>
       <body
         className={`${lora.variable} ${plusJakarta.variable} ${cormorant.variable} font-jakarta antialiased overflow-x-hidden`}
       >

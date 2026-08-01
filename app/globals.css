@@ -45,6 +45,11 @@ body {
   color: var(--text);
 }
 
+/* Fixní lišta je vysoká 68px — bez tohohle skočí kotva pod ni. */
+[id] {
+  scroll-margin-top: 84px;
+}
+
 /* Marquee animation */
 @keyframes marquee {
   from {
@@ -65,4 +70,18 @@ body {
 .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Kdo má v systému vypnutý pohyb, nemá důvod přijít o obsah ani sledovat
+   nekonečně běžící pás. */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .marquee {
+    animation: none !important;
+  }
 }

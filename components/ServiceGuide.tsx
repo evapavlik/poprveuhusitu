@@ -3,6 +3,11 @@ import FadeUp from "./FadeUp";
 
 const steps = [
   {
+    num: "00",
+    title: "Než to začne",
+    text: "Přijďte klidně o pár minut dřív. Sednout si můžete kamkoli — žádná místa nejsou rezervovaná a zadní lavice jsou úplně v pořádku. Zpěvník bývá v lavici nebo u vchodu.",
+  },
+  {
     num: "01",
     title: "Příchod kněze",
     text: "Lidé povstanou na pozdrav. Nemusíte — nikdo vás nebude kárat. Kostel je místo úcty, ne disciplíny.",
@@ -15,12 +20,12 @@ const steps = [
   {
     num: "03",
     title: "Přijímání",
-    text: "Přijímání pod obojí — chléb i víno. Může přistoupit každý pokřtěný křesťan, bez ohledu na církev. Ostatní dostanou požehnání.",
+    text: "Přijímání pod obojí — chléb i víno. Může přistoupit každý pokřtěný křesťan, bez ohledu na církev. Pokud pokřtění nejste, můžete zůstat sedět, nebo přijít pro požehnání.",
   },
   {
     num: "04",
     title: "Závěr a oznámení",
-    text: "Závěrečné požehnání a oznámení o dění v obci. Pak je prostor na rozhovor. Komunita začíná po bohoslužbě.",
+    text: "Závěrečné požehnání a oznámení o dění ve sboru. Pak je prostor na rozhovor. Komunita začíná po bohoslužbě.",
   },
 ];
 
@@ -46,7 +51,7 @@ export default function ServiceGuide() {
         </p>
       </FadeUp>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {steps.map((step, i) => (
           <FadeUp key={step.num} delay={i * 70}>
             <div className="bg-white border border-border rounded-xl px-6 py-8">
@@ -63,20 +68,31 @@ export default function ServiceGuide() {
       </div>
 
       <FadeUp>
-        <div className="mt-10 text-center space-y-3">
+        <div className="mt-10 bg-white border border-brick/15 rounded-xl px-7 py-8 max-w-[620px]">
+          <h3 className="font-lora text-lg font-semibold mb-2.5">
+            Vezměte si průvodce s sebou
+          </h3>
+          <p className="text-sm font-light leading-[1.8] text-text-muted mb-6">
+            Celá bohoslužba krok za krokem — u každého kroku je napsané, co se
+            právě děje a kdy se vstává. Otevřete si ji v mobilu přímo v lavici.
+            Nikdo si toho nevšimne.
+          </p>
           <Link
             href="/pruvodce"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-brick no-underline hover:text-brick-light transition-colors"
+            className="bg-brick text-white font-jakarta text-sm font-semibold px-7 py-3.5 rounded-md no-underline inline-block hover:bg-brick-light hover:-translate-y-px transition-all duration-200"
           >
-            Podrobný průvodce bohoslužbou
-            <span aria-hidden="true">→</span>
+            Otevřít průvodce bohoslužbou
           </Link>
-          <br />
+        </div>
+      </FadeUp>
+
+      <FadeUp>
+        <div className="mt-6">
           <Link
             href="/otcenas"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-sage no-underline hover:text-sage/80 transition-colors"
           >
-            Výklad Otčenáše — podle biskupa Kováře
+            Výklad Otčenáše — podle patriarchy Kováře
             <span aria-hidden="true">→</span>
           </Link>
         </div>

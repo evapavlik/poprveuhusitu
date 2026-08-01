@@ -1,3 +1,5 @@
+import { FindCongregationButton, FindCongregationSteps } from "./FindCongregation";
+
 export default function CtaSection() {
   return (
     <section
@@ -13,14 +15,25 @@ export default function CtaSection() {
         Nenabízíme odpovědi na vše. Nabízíme společenství lidí, kteří hledají poctivě — a
         víru, která to unese.
       </p>
-      <a
-        href="https://www.ccsh.cz/mapka.html"
-        className="bg-brick text-white font-jakarta text-sm font-semibold px-8 py-4 rounded-md no-underline inline-block hover:bg-brick-light hover:-translate-y-px transition-all duration-200"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Najít sbor blízko vás
-      </a>
+
+      <FindCongregationButton />
+
+      <FindCongregationSteps className="max-w-[460px] mx-auto mt-10" />
+
+      {/* Tišší cesta pro toho, kdo se zatím nechce ukázat mezi lidmi. */}
+      <div className="max-w-[460px] mx-auto mt-10 pt-8 border-t border-brick/12">
+        <p className="text-[15px] font-light leading-[1.8] text-text-muted">
+          Nechcete přijít rovnou?{" "}
+          <a
+            href="mailto:eva.pavlik+husiti@gmail.com?subject=Dotaz%20z%20webu%20Poprv%C3%A9%20u%20husit%C5%AF"
+            className="text-brick font-medium underline underline-offset-2 hover:text-brick-light transition-colors"
+          >
+            Napište mi
+          </a>{" "}
+          a zeptejte se na cokoli. Nejsem farářka — jsem člověk, který tenhle web
+          udělal, protože sám hledal.
+        </p>
+      </div>
     </section>
   );
 }

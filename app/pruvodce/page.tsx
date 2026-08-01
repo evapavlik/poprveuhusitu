@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import {
+  FindCongregationButton,
+  FindCongregationSteps,
+} from "@/components/FindCongregation";
 
 export const metadata: Metadata = {
   title: "Průvodce bohoslužbou — Husitská církev",
@@ -80,7 +84,7 @@ const sections: {
       {
         title: "Obětování a chvalozpěv",
         text: 'Kněz připraví chléb a víno. Připomínáme si oběť Ježíše Krista za nás. Vděčnost vyjadřujeme chvalozpěvem „Svatý, svatý, svatý".',
-        tip: "Kněz smísí víno s vodou — tento zvyk sahá až k nejstarším křesťanským obcím. Už ve 2. století se při bohoslužbě používal chléb a kalich vína smíšeného s vodou.",
+        tip: "Kněz smísí víno s vodou — tento zvyk sahá až k nejstarším křesťanům. Už ve 2. století se při bohoslužbě používal chléb a víno smíšené s vodou.",
       },
     ],
   },
@@ -89,10 +93,10 @@ const sections: {
     desc: "Poslední večeře Ježíše Krista",
     steps: [
       {
-        title: "Eucharistická modlitba",
-        text: "Lidé povstanou. Velká modlitba díků za zjevení Boží milosti. Následuje zpřítomnění poslední večeře Ježíše s učedníky — kněz pozvedá hostii a kalich s vínem. Po zpřítomnění se usedá.",
+        title: "Modlitba díků",
+        text: "Lidé povstanou. Velká modlitba díků za zjevení Boží milosti. Následuje zpřítomnění poslední večeře Ježíše s učedníky — kněz pozvedá chléb a víno. Po zpřítomnění se usedá.",
         note: "vstává se",
-        tip: 'Eucharistie = řecky eu (dobře) + chairein (radovat se). Doslova „díkůvzdání". Jde o zpřítomnění — ne opakování — poslední večeře.',
+        tip: 'Uslyšíte možná slovo eucharistie — řecky doslova „díkůvzdání". Je to jen jiný název pro přijímání. Jde o zpřítomnění, ne opakování poslední večeře.',
       },
     ],
   },
@@ -115,9 +119,9 @@ const sections: {
     steps: [
       {
         title: "Přijímání",
-        text: "K přijímání může přistoupit každý pokřtěný křesťan, bez rozdílu církevní příslušnosti. Kněz podává hostii (chléb) namočenou ve víně. Děti a ti, kdo nechtějí přistoupit, dostanou požehnání — křížek na čelo.",
+        text: "K přijímání může přistoupit každý pokřtěný křesťan, bez ohledu na církev. Kněz podává kousek chleba namočený ve víně. Děti a ti, kdo nechtějí přistoupit, dostanou požehnání — křížek na čelo. Pokud pokřtění nejste, můžete klidně zůstat sedět.",
         note: "otevřené všem pokřtěným",
-        tip: 'Přijímání „pod obojí" (chléb i víno) je základní znak husitské tradice — od dob Jana Husa. Hostie je nekvašený chléb.',
+        tip: 'Přijímání „pod obojí" (chléb i víno) je základní znak husitské tradice — od dob Jana Husa. Chlebu se říká hostie; je nekvašený, tenký jako oplatka.',
       },
     ],
   },
@@ -251,14 +255,8 @@ export default function PruvodcePage() {
       {/* Footer */}
       <footer className="px-5 pt-4 pb-12 max-w-[540px] mx-auto text-center space-y-5">
         <div className="border-t border-border pt-8">
-          <a
-            href="https://www.ccsh.cz/mapka.html"
-            className="inline-block bg-brick text-white font-jakarta text-sm font-semibold px-7 py-3.5 rounded-md no-underline hover:bg-brick-light hover:-translate-y-px transition-all duration-200"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Najít sbor blízko vás
-          </a>
+          <FindCongregationButton />
+          <FindCongregationSteps className="mt-8" />
         </div>
 
         <p className="text-[11px] text-text-muted/50 leading-relaxed">
@@ -273,7 +271,7 @@ export default function PruvodcePage() {
           href="/"
           className="text-[12px] text-brick font-medium no-underline hover:text-brick-light transition-colors"
         >
-          poprveuhusitu.cz
+          Zpět na úvod
         </Link>
       </footer>
     </main>

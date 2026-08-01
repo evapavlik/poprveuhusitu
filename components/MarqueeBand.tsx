@@ -9,12 +9,22 @@ export default function MarqueeBand() {
   return (
     <div className="bg-brick overflow-hidden">
       <div
-        className="flex whitespace-nowrap"
+        className="marquee flex whitespace-nowrap"
         style={{ animation: "marquee 32s linear infinite" }}
       >
-        {[...items, ...items].map((item, i) => (
+        {items.map((item, i) => (
           <span
-            key={i}
+            key={`a-${i}`}
+            className="inline-flex items-center gap-5 px-10 py-[18px] shrink-0 text-xs font-semibold tracking-[0.15em] uppercase text-white/85"
+          >
+            {item}
+          </span>
+        ))}
+        {/* Druhá sada existuje jen kvůli plynulé smyčce — čtečka ji číst nemá. */}
+        {items.map((item, i) => (
+          <span
+            key={`b-${i}`}
+            aria-hidden="true"
             className="inline-flex items-center gap-5 px-10 py-[18px] shrink-0 text-xs font-semibold tracking-[0.15em] uppercase text-white/85"
           >
             {item}
