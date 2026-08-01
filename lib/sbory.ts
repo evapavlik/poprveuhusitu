@@ -18,6 +18,8 @@ export type Sbor = {
   mesto: string;
   lat: number;
   lng: number;
+  /** Identifikátor v adresáři CČSH — klíč k detailu sboru. */
+  oid: string;
   /** Odkaz na detail sboru, kde je čas bohoslužby a telefon na faráře. */
   detailUrl: string;
 };
@@ -68,6 +70,7 @@ export function parsujSbory(html: string): Sbor[] {
       mesto,
       lat: Number(lat),
       lng: Number(lng),
+      oid,
       detailUrl: `https://www.ccsh.cz/obec-detail.html?oid=${oid}`,
     });
   }
