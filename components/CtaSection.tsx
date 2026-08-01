@@ -1,4 +1,4 @@
-import { FindCongregationButton, FindCongregationSteps } from "./FindCongregation";
+import NearestCongregations from "./NearestCongregations";
 
 export default function CtaSection() {
   return (
@@ -16,9 +16,7 @@ export default function CtaSection() {
         víru, která to unese.
       </p>
 
-      <FindCongregationButton />
-
-      <FindCongregationSteps className="max-w-[460px] mx-auto mt-10" />
+      <NearestCongregations />
 
       {/* Tišší cesta pro toho, kdo se zatím nechce ukázat mezi lidmi. */}
       <div className="max-w-[460px] mx-auto mt-10 pt-8 border-t border-brick/12">
