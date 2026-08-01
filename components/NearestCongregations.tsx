@@ -223,15 +223,18 @@ export default function NearestCongregations() {
                     {s.detail?.duchovni && (
                       <div className="mt-3 flex items-center gap-2.5">
                         {s.detail.duchovni.fotoUrl && (
-                          /* Portréty v adresáři jsou už samy těsné výřezy hlavy
-                             — kolečko z nich ukrajovalo obličej. Obdélník
-                             v poměru předlohy nechá hlavu celou. */
+                          /* Bez ořezu. Předlohy mají různý poměr stran (0,62 až
+                             0,78) a každý výřez některé z nich usekl bradu nebo
+                             temeno — pevná výška a volná šířka je nechá být. */
                           <Image
                             src={s.detail.duchovni.fotoUrl}
                             alt=""
-                            width={80}
-                            height={106}
-                            className="w-10 h-[52px] rounded-md object-cover shrink-0 ring-1 ring-border"
+                            width={600}
+                            height={867}
+                            /* aspectRatio: auto — jinak by prohlížeč držel poměr
+                               z atributů výše a všechny fotky by srovnal na jeden. */
+                            style={{ aspectRatio: "auto" }}
+                            className="h-14 w-auto rounded-md shrink-0 ring-1 ring-border"
                           />
                         )}
                         <span className="text-[13px] leading-[1.5] text-text-muted">
