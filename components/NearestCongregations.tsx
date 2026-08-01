@@ -1,10 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { useRef, useState } from "react";
 import { vzdalenostKm, type Sbor } from "@/lib/sbory";
+import type { SborDetail } from "@/lib/sborDetail";
 import { FindCongregationLink, FindCongregationSteps } from "./FindCongregation";
 
-type Nalezeny = Sbor & { km: number };
+type Nalezeny = Sbor & { km: number; detail?: SborDetail };
 type Stav =
   | { typ: "vychozi" }
   | { typ: "hledam" }
@@ -12,6 +14,30 @@ type Stav =
   | { typ: "chyba"; zprava: string };
 
 const POCET = 3;
+
+/**
+ * Některé sbory mají v adresáři celý odstavec — nedělní bohoslužba, biblické
+ * hodiny, návštěvní hodiny. Do karty patří jen ta první věta, kde je nedělní
+ * čas; zbytek si člověk přečte po rozkliknutí.
+ */
+const ZKRATKY = new Set([
+  "sv", "hod", "nám", "ul", "tj", "tzv", "č", "st", "mj", "apod", "atd",
+  "cca", "resp", "popř", "mgr", "dr", "ing", "bc", "th", "phdr", "rndr",
+]);
+
+function zkratBohosluzby(text: string): string {
+  // Naivní dělení na tečce useklo „v kapli sv. Anny“ i „večerní spol. modlitba“.
+  // Věta končí, jen když slovo před tečkou není zkratka a za ní začíná velké
+  // písmeno — obojí musí platit zároveň.
+  for (let i = text.indexOf(". "); i > 0; i = text.indexOf(". ", i + 1)) {
+    const slovo = (text.slice(0, i).match(/([\p{L}]+)$/u)?.[1] ?? "").toLowerCase();
+    const dalsi = text[i + 2] ?? "";
+    if (!ZKRATKY.has(slovo) && dalsi && dalsi === dalsi.toUpperCase() && /\p{L}/u.test(dalsi)) {
+      return text.slice(0, i + 1);
+    }
+  }
+  return text.length > 150 ? text.slice(0, 150).trimEnd() + "…" : text;
+}
 
 function formatVzdalenost(km: number): string {
   // Pod 100 m by zaokrouhlování na desítky metrů dávalo „0 m“.
@@ -41,11 +67,25 @@ export default function NearestCongregations() {
   async function najdi(pozice: { lat: number; lng: number }, odkud: string) {
     try {
       const sbory = await ziskejSbory();
-      const nejblizsi = sbory
+      const nejblizsi: Nalezeny[] = sbory
         .map((s) => ({ ...s, km: vzdalenostKm(pozice, s) }))
         .sort((a, b) => a.km - b.km)
         .slice(0, POCET);
+
+      // Seznam ukázat hned; čas bohoslužby a duchovní dotéct, jak dorazí.
       setStav({ typ: "hotovo", odkud, sbory: nejblizsi });
+
+      const sDetaily = await Promise.all(
+        nejblizsi.map(async (s) => {
+          try {
+            const res = await fetch(`/api/sbor?oid=${encodeURIComponent(s.oid)}`);
+            return res.ok ? { ...s, detail: (await res.json()) as SborDetail } : s;
+          } catch {
+            return s;
+          }
+        })
+      );
+      setStav({ typ: "hotovo", odkud, sbory: sDetaily });
     } catch {
       setStav({
         typ: "chyba",
@@ -167,18 +207,51 @@ export default function NearestCongregations() {
                         {formatVzdalenost(s.km)}
                       </span>
                     </div>
-                    <p className="text-[13px] font-light text-text-muted leading-[1.6] mb-2.5">
+                    <p className="text-[13px] font-light text-text-muted leading-[1.6]">
                       {s.ulice}
                       {s.ulice && s.mesto ? ", " : ""}
                       {s.mesto}
                     </p>
+
+                    {s.detail?.bohosluzby && (
+                      <p className="mt-2 text-[13px] leading-[1.6] text-text">
+                        <span className="font-medium">Bohoslužby: </span>
+                        {zkratBohosluzby(s.detail.bohosluzby)}
+                      </p>
+                    )}
+
+                    {s.detail?.duchovni && (
+                      <div className="mt-3 flex items-center gap-2.5">
+                        {s.detail.duchovni.fotoUrl && (
+                          /* Portréty v adresáři jsou už samy těsné výřezy hlavy
+                             — kolečko z nich ukrajovalo obličej. Obdélník
+                             v poměru předlohy nechá hlavu celou. */
+                          <Image
+                            src={s.detail.duchovni.fotoUrl}
+                            alt=""
+                            width={80}
+                            height={106}
+                            className="w-10 h-[52px] rounded-md object-cover shrink-0 ring-1 ring-border"
+                          />
+                        )}
+                        <span className="text-[13px] leading-[1.5] text-text-muted">
+                          <span className="font-medium text-text">
+                            {s.detail.duchovni.jmeno}
+                          </span>
+                          <span className="block text-[12px]">
+                            {s.detail.duchovni.role}
+                          </span>
+                        </span>
+                      </div>
+                    )}
+
                     <a
                       href={s.detailUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-[13px] font-medium text-brick no-underline hover:text-brick-light transition-colors"
+                      className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-medium text-brick no-underline hover:text-brick-light transition-colors"
                     >
-                      Čas bohoslužby a kontakt
+                      Kontakt a mapa
                       <span aria-hidden="true">→</span>
                     </a>
                   </li>
@@ -186,8 +259,8 @@ export default function NearestCongregations() {
               </ol>
               <p className="mt-4 text-[12px] font-light leading-[1.7] text-text-muted">
                 Vzdálenost je vzdušnou čarou. Uvedená adresa je kontaktní —
-                bohoslužba někdy bývá jinde ve městě, přesné místo i čas najdete
-                po rozkliknutí. Údaje pocházejí z oficiálního adresáře CČSH.
+                bohoslužba někdy bývá jinde ve městě. Údaje i fotografie
+                pocházejí z oficiálního adresáře CČSH.
               </p>
             </div>
           )}
