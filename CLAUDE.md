@@ -126,7 +126,7 @@ Speciální citáty:   Cormorant Garamond — italika pro velké citáty (Google
 - Sage zelené pozadí
 - Velký italický citát Farského v Cormorant Garamond
 - Aktuální citát: „Člověk není na světě, aby činil zlé, nýbrž aby žil pro dobro, a tak plnil věčný zákon Boží, řídící vesmír."
-- ⚠️ **Citát dosud bez ověřeného zdroje** — před publikací ověřit přesný původ
+- ✅ **Zdroj ověřen:** Karel Farský, *Postila* (1922), s. 70
 
 ### 7. `#bohosluzba` — Co vás čeká poprvé (4 karty)
 - 4 karty: neformální atmosféra / kázání v živém jazyce / přijímání otevřené všem / nemusíte se zapojovat
@@ -231,6 +231,6 @@ CLAUDE.md               # tento soubor
 
 ## Otevřené úkoly
 
-- [ ] **Ověřit zdroj citátu v Quote.tsx** — „Člověk není na světě, aby činil zlé…" — atribuce „Karel Farský" bez konkrétního dokumentu
+- [x] **Ověřit zdroj citátu v Quote.tsx** — ✅ dohledáno: Karel Farský, *Postila* (1922), s. 70. Znění na webu bylo parafráze; opraveno na doložené „Člověk není na světě, aby páchal zlo, nýbrž aby žil dobru, a tak naplnil věčný zákon Boží, vládnoucí vesmírem."
 - [x] **Nasazení na Vercel** — ✅ poprveuhusitu.vercel.app
 - [ ] **Fotografie** — zvážit přidání fotografií sborů / bohoslužeb do sekcí (nyní je stránka čistě textová + ikony)

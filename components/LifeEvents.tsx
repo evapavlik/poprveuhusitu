@@ -1,4 +1,5 @@
 import FadeUp from "./FadeUp";
+import { FindCongregationLink } from "./FindCongregation";
 
 const icons = {
   water: (
@@ -36,7 +37,7 @@ const events = [
   {
     icon: icons.rings,
     title: "Svatba",
-    text: "Církevní sňatek v CČSH je platný i občansky — nemusíte na úřad. Oddávat mohou i farářky.",
+    text: "Církevní sňatek v CČSH je platný i občansky — nemusíte pak na radnici podruhé. Jen si předem vyzvednete na matrice osvědčení. Oddávat mohou i farářky.",
   },
   {
     icon: icons.dove,
@@ -82,6 +83,18 @@ export default function LifeEvents() {
           </FadeUp>
         ))}
       </div>
+
+      <FadeUp>
+        <div className="mt-10 max-w-[560px]">
+          <p className="text-sm font-light leading-[1.8] text-text-muted mb-3">
+            Cokoliv z toho se dá domluvit napřímo. V seznamu sborů najdete svoje
+            město — na stránce sboru je telefon na faráře nebo farářku.
+          </p>
+          <FindCongregationLink variant="sage">
+            Najít sbor blízko vás
+          </FindCongregationLink>
+        </div>
+      </FadeUp>
     </section>
   );
 }

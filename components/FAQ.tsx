@@ -1,16 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import FadeUp from "./FadeUp";
+import { FindCongregationLink } from "./FindCongregation";
 
-const faqs = [
+const faqs: { q: string; a: ReactNode }[] = [
   {
     q: "Musím věřit v Boha, abych mohl/a přijít?",
     a: "Ne. Vůbec. Můžete být zcela nevěřící, můžete mít pochybnosti, můžete si jen chtít poslechnout, jak taková bohoslužba vypadá. Nikdo se vás nebude ptát, co věříte. Jste vítáni tak, jak jste.",
   },
   {
+    q: "Nejsem pokřtěný/á. Můžu vůbec přijít?",
+    a: "Ano. Křest není podmínkou návštěvy — týká se jen přijímání. Když ostatní jdou k přijímání, můžete zůstat sedět, nebo jít s nimi a přijmout požehnání. Obojí je naprosto v pořádku a nikdo to nebude řešit.",
+  },
+  {
     q: "Co si mám obléct?",
     a: "Cokoliv, v čem se cítíte dobře. Žádný dress code neexistuje. Přijďte tak, jak jste.",
+  },
+  {
+    q: "Bude se po mně chtít, abych přispěl/a?",
+    a: "Během bohoslužby se koná sbírka. Přispět ale nemusíte a nikdo nekontroluje, jestli jste přispěli — není to vstupné. Když košíček prostě podáte dál, nikdo se nepozastaví.",
+  },
+  {
+    q: "Bude mě někdo oslovovat, když nikoho neznám?",
+    a: "Nejspíš vás někdo pozdraví, ale nikdo vás nebude vyslýchat ani nutit se představit. Když budete chtít po bohoslužbě odejít rovnou, je to úplně v pořádku. A když si naopak budete chtít popovídat, je na to prostor.",
   },
   {
     q: "Mohu přijít s dětmi?",
@@ -18,7 +31,16 @@ const faqs = [
   },
   {
     q: "Kdy se bohoslužba koná?",
-    a: "Většinou v neděli dopoledne, ale záleží na konkrétním sboru. Některé obce mají bohoslužby i ve všední den. Trvá přibližně 45–60 minut.",
+    a: (
+      <>
+        Většinou v neděli dopoledne, ale záleží na konkrétním sboru. Některé
+        sbory mají bohoslužby i ve všední den. Trvá přibližně 45–60 minut.
+        Konkrétní čas najdete na stránce svého sboru.
+        <span className="block mt-3">
+          <FindCongregationLink>Najít sbor blízko vás</FindCongregationLink>
+        </span>
+      </>
+    ),
   },
   {
     q: "Děje se něco i mimo bohoslužbu?",
@@ -48,36 +70,49 @@ export default function FAQ() {
       </FadeUp>
 
       <div className="max-w-[720px]">
-        {faqs.map((faq, i) => (
-          <FadeUp key={i} delay={i * 50}>
-            <div className="border-b border-border">
-              <button
-                onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between py-6 text-left cursor-pointer bg-transparent border-none"
-              >
-                <span className="font-lora text-[17px] font-semibold pr-8">
-                  {faq.q}
-                </span>
-                <span
-                  className={`text-brick text-xl shrink-0 transition-transform duration-300 ${
-                    open === i ? "rotate-45" : ""
+        {faqs.map((faq, i) => {
+          const isOpen = open === i;
+          return (
+            <FadeUp key={faq.q} delay={i * 50}>
+              <div className="border-b border-border">
+                <button
+                  id={`faq-tlacitko-${i}`}
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-odpoved-${i}`}
+                  className="w-full flex items-center justify-between py-6 text-left cursor-pointer bg-transparent border-none"
+                >
+                  <span className="font-lora text-[17px] font-semibold pr-8">
+                    {faq.q}
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className={`text-brick text-xl shrink-0 transition-transform duration-300 ${
+                      isOpen ? "rotate-45" : ""
+                    }`}
+                  >
+                    +
+                  </span>
+                </button>
+                {/* grid-rows 0fr→1fr místo pevného max-h: neořízne ani delší odpověď */}
+                <div
+                  id={`faq-odpoved-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-tlacitko-${i}`}
+                  className={`grid transition-all duration-300 ${
+                    isOpen ? "grid-rows-[1fr] pb-6" : "grid-rows-[0fr]"
                   }`}
                 >
-                  +
-                </span>
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  open === i ? "max-h-40 pb-6" : "max-h-0"
-                }`}
-              >
-                <p className="text-sm font-light leading-[1.8] text-text-muted">
-                  {faq.a}
-                </p>
+                  <div className="overflow-hidden">
+                    <div className="text-sm font-light leading-[1.8] text-text-muted">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </FadeUp>
-        ))}
+            </FadeUp>
+          );
+        })}
       </div>
     </section>
   );

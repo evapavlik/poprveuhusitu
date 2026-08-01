@@ -1,10 +1,16 @@
+import Image from "next/image";
 import FadeUp from "./FadeUp";
 
 const timeline = [
   {
-    year: "1919",
-    title: "Český misál a první česká mše",
-    text: "Farský překládá celý misál do češtiny — po večerech, při petrolejové lampě. O Velikonocích slouží jako jeden z prvních mši v mateřském jazyce. Do konce roku slaví česky již tisíc kněží po celé zemi.",
+    year: "Velikonoce 1919",
+    title: "První mše v mateřském jazyce",
+    text: "Farský překládá misál do češtiny — po večerech, při petrolejové lampě. O Velikonocích slouží jako jeden z prvních mši v jazyce, kterému lidé v lavicích rozumějí.",
+  },
+  {
+    year: "Vánoce 1919",
+    title: "Půlnoční česky po celé zemi",
+    text: "O Vánocích už slouží česky kněží v celé zemi. Poprvé od husitských dob zní o půlnoční mše jazykem, kterým se mluví doma.",
   },
   {
     year: "1920",
@@ -19,7 +25,7 @@ const timeline = [
   {
     year: "1924",
     title: "První biskup-patriarcha",
-    text: "Farský se stává prvním biskupem-patriarchou církve, které zasvětil celý život. Tři roky nato umírá ve 47 letech — vyčerpán prací, které se nevzdal.",
+    text: "Farský se stává prvním biskupem-patriarchou církve, které zasvětil celý život. Za necelé tři roky umírá ve 46 letech — vyčerpán prací, které se nevzdal.",
   },
 ];
 
@@ -43,9 +49,11 @@ export default function KarelFarsky() {
         <FadeUp>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-[44px] h-[44px] rounded-full overflow-hidden shrink-0 ring-1 ring-sage/30">
-              <img
+              <Image
                 src="/karel-farsky.png"
                 alt="Portrét Dr. Karla Farského"
+                width={125}
+                height={176}
                 className="w-full h-full object-cover object-top"
                 style={{
                   filter: "sepia(1) saturate(1.2) hue-rotate(-10deg) contrast(0.95) brightness(0.95)",

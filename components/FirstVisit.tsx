@@ -40,8 +40,8 @@ const cards = [
   },
   {
     icon: icons.bread,
-    title: "Přijímání otevřené všem",
-    text: "Ke stolu Páně může přistoupit každý pokřtěný křesťan, bez ohledu na církev. Děti dostávají požehnání.",
+    title: "Přijímání napříč církvemi",
+    text: "K přijímání může přistoupit každý pokřtěný křesťan, bez ohledu na církev — v mnoha jiných církvích to možné není. Pokud pokřtění nejste, můžete zůstat sedět, nebo přijít pro požehnání.",
   },
   {
     icon: icons.heart,
