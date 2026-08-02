@@ -15,12 +15,12 @@ const steps = [
   {
     num: "02",
     title: "Čtení a kázání",
-    text: "Čtení z Bible a evangelium. Pak kázání – srozumitelné, o tom, co žijeme dnes.",
+    text: "Čtení z Bible, poslední z evangelia. Pak kázání – výklad toho, co se právě četlo.",
   },
   {
     num: "03",
     title: "Přijímání",
-    text: "Přijímání pod obojí – chléb i víno. Může přistoupit každý pokřtěný křesťan, bez ohledu na církev. Pokud pokřtění nejste, můžete zůstat sedět, nebo přijít pro požehnání.",
+    text: "Lidé postupně jdou dopředu. Kněz podává kousek chleba namočený ve víně. Zůstat sedět je úplně v pořádku.",
   },
   {
     num: "04",

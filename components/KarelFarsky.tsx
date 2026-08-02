@@ -5,7 +5,7 @@ const timeline = [
   {
     year: "Velikonoce 1919",
     title: "První mše v mateřském jazyce",
-    text: "Farský překládá misál do češtiny – po večerech, při petrolejové lampě. O Velikonocích slouží jako jeden z prvních mši v jazyce, kterému lidé v lavicích rozumějí.",
+    text: "Farský překládá texty mše do češtiny – po večerech, při petrolejové lampě. O Velikonocích slouží jako jeden z prvních mši v jazyce, kterému lidé v lavicích rozumějí.",
   },
   {
     year: "Vánoce 1919",
@@ -20,12 +20,12 @@ const timeline = [
   {
     year: "1922",
     title: "Farský jako teolog a myslitel",
-    text: "Společně s Františkem Kalousem vydává Československý katechismus – věrouku, která chápe vědu a víru ne jako protivníky, ale jako spojence.",
+    text: "Společně s Františkem Kalousem vydává Československý katechismus – knihu o tom, čemu církev věří: věda a víra jsou spojenci, ne protivníci.",
   },
   {
     year: "1924",
     title: "První biskup-patriarcha",
-    text: "Farský se stává prvním biskupem-patriarchou církve, které zasvětil celý život. Za necelé tři roky umírá ve 46 letech – vyčerpán prací, které se nevzdal.",
+    text: "Farský se stává hlavou církve – prvním biskupem-patriarchou. Zasvětil jí celý život. Za necelé tři roky umírá ve 46 letech – vyčerpán prací, které se nevzdal.",
   },
 ];
 

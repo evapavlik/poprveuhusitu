@@ -33,7 +33,7 @@ const sections: {
   },
   {
     name: "Modlitby",
-    desc: "Tužby, přímluvy a prosby",
+    desc: "Prosby za svět i za nás",
     steps: [
       {
         title: "První čtení z Bible",
@@ -41,7 +41,7 @@ const sections: {
       },
       {
         title: "Přímluvné modlitby",
-        text: 'Zaznívají díky, chvály a prosby. Obec odpovídá krátkými modlitebními zvoláními – česky, řecky nebo staroslověnsky. Slovo AMEN znamená „staň se".',
+        text: 'Zaznívají díky, chvály a prosby. Lidé odpovídají krátkými zvoláními – česky, řecky nebo staroslověnsky. Slovo AMEN znamená „staň se".',
         tip: 'Kyrie eleison = Pane, smiluj se (řecky). Gospodi pomiluj = totéž staroslověnsky. Smiluj se, Hospodine = česky.',
       },
     ],
@@ -52,7 +52,7 @@ const sections: {
     steps: [
       {
         title: "Druhé čtení z Bible",
-        text: "Další úryvek z Písma – většinou z Nového zákona (epištoly).",
+        text: "Další úryvek z Bible – většinou z Nového zákona (epištoly).",
         tip: "Epištoly jsou dopisy apoštolů prvním křesťanským obcím. Nejznámější jsou listy apoštola Pavla.",
       },
       {
@@ -115,7 +115,7 @@ const sections: {
   },
   {
     name: "Přijímání",
-    desc: "Svátost večeře Páně",
+    desc: "Kdo může přistoupit",
     steps: [
       {
         title: "Přijímání",
@@ -136,7 +136,7 @@ const sections: {
       },
       {
         title: "Oznámení",
-        text: "Co se děje ve sboru v nejbližší době. Se závěrečnou písní kněz odchází, lidé povstanou na znamení pozdravu. Součástí bohoslužby je i sbírka na provoz kostela nebo na charitativní účely.",
+        text: "Co se děje ve sboru v nejbližší době. Se závěrečnou písní kněz odchází, lidé povstanou na znamení pozdravu. Součástí je i dobrovolná sbírka na provoz kostela nebo na charitativní účely.",
       },
     ],
   },

@@ -10,7 +10,7 @@ export default function Quote() {
         </p>
       </FadeUp>
       <p className="text-xs font-semibold tracking-[0.2em] uppercase text-white">
-        Karel Farský · Postila, 1922
+        Karel Farský · Postila (kázání), 1922
       </p>
     </div>
   );

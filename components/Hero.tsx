@@ -5,21 +5,23 @@
  */
 const odlisnosti = [
   {
-    co: "Farářky i faráři",
-    detail: "Ženy u nás slouží od roku 1947 – dávno před většinou církví v Evropě.",
+    co: "Svoboda svědomí",
+    detail:
+      "Víra je osobní cesta, ne soubor pravidel, která musíte přijmout celá. Pochybnosti nepotlačujeme.",
   },
   {
-    co: "Bohoslužba česky",
-    detail: "Od roku 1920. Kázání je rozhovor o dnešku, ne výčet dogmat.",
+    co: "Víra a věda si neodporují",
+    detail: "Farský to napsal ve dvacátých letech. Platí to dodnes.",
+  },
+  {
+    co: "Farářky i faráři",
+    detail:
+      "Ženy u nás slouží od roku 1947. Naši duchovní mají rodiny, celibát není podmínkou.",
   },
   {
     co: "Přijímání napříč církvemi",
     // Pro člověka zvenčí je „přijímání“ prázdné slovo, proto hned chléb a víno.
     detail: "Chléb a víno může přijmout každý pokřtěný křesťan, bez ohledu na církev.",
-  },
-  {
-    co: "Víra a věda se nevylučují",
-    detail: "Pochybnosti nepotlačujeme. Tak to Farský napsal už ve dvacátých letech.",
   },
 ];
 

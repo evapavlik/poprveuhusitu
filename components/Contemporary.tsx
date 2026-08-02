@@ -8,7 +8,7 @@ const themes = [
   },
   {
     title: "Odpuštění ve třech krocích",
-    text: "Farský chápal odpuštění trojmo: odpustit druhému, smířit se s ním, a pak smířit se se sebou. Psychologie, která předběhla dobu.",
+    text: "Farský to rozdělil do tří kroků: odpustit druhému, smířit se s ním, a pak smířit se se sebou. Psychologie, která předběhla dobu.",
   },
   {
     title: "Víra a věda společně",
@@ -16,7 +16,7 @@ const themes = [
   },
   {
     title: "Bez okázalosti",
-    text: "Farský trval na církvi bez okázalého bohatství. Jednoduchost, služba, přítomnost u těch, kdo trpí.",
+    text: "Farský trval na církvi bez okázalého bohatství. Skromnost, pomoc druhým, být nablízku, když je zle.",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function Contemporary() {
                 href="#kontakt"
                 className="bg-brick text-white font-jakarta text-sm font-semibold px-8 py-4 rounded-md no-underline inline-block hover:bg-brick-light hover:-translate-y-px transition-all duration-200"
               >
-                Přijďte se přesvědčit
+                Přijďte se podívat
               </a>
               <Link
                 href="/kralovstvi-bozi"
