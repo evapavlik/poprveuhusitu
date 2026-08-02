@@ -12,7 +12,7 @@ const themes = [
   },
   {
     title: "Víra a věda společně",
-    text: "CČSH nikdy nestavěla vědu proti Bohu. Ptát se, zkoumat, pochybovat — to je projev vážného vztahu s pravdou.",
+    text: "CČSH nikdy nestavěla vědu proti Bohu. Ptát se, zkoumat, pochybovat – to je projev vážného vztahu s pravdou.",
   },
   {
     title: "Bez okázalosti",
@@ -41,7 +41,7 @@ export default function Contemporary() {
             <p className="text-base font-light leading-[1.85] text-text-muted mb-4">
               Farský psal o korupci, která rozkládá společnost. O stranickém
               kompromisnictví. O odpuštění jako radikálním činu. O solidaritě, která nesmí
-              být jen rétorika. Čteme ho dnes — a je to jako číst dnešní noviny, jen s
+              být jen rétorika. Čteme ho dnes – a je to jako číst dnešní noviny, jen s
               nadějí navíc.
             </p>
           </FadeUp>

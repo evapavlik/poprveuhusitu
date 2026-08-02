@@ -20,7 +20,7 @@ const kapitoly = [
       'Smír může vytvořiti pouze náboženství, které upokojí rozum, vůli i cit a přinese harmonii nitra, tím i spokojenost a tvořivost nového činorodého života.',
       'Přiblížilo se království boží! Oblecte se v nového člověka! Stanete se syny božími!',
       'Nové náboženství žádá především **náboženskosti** od člověka, vede ho k ní, pěstuje a zdokonaluje ho v ní. Jsou pak náboženskostí životní vztahy, vztahy citu a vůle k nadosobnímu, nadlidskému, nadsvětovému, absolutnímu, věčnému, božskému.',
-      'Existenci tohoto božství si nový člověk rozumem nedokazuje, protože rozumem nelze ji dokázati, ale ví také, že nelze ji vyvrátiti. To co k uznání a žití dle toho přesvědčení ho vede, je jeho **cit, vnitřní hlas**, který mu praví, že za tím vším — vesmírem, jehož zákony věda stanoví a zkoumá, i jeho nitrem — za tím vším a nad tím vším něco musí být.',
+      'Existenci tohoto božství si nový člověk rozumem nedokazuje, protože rozumem nelze ji dokázati, ale ví také, že nelze ji vyvrátiti. To co k uznání a žití dle toho přesvědčení ho vede, je jeho **cit, vnitřní hlas**, který mu praví, že za tím vším – vesmírem, jehož zákony věda stanoví a zkoumá, i jeho nitrem – za tím vším a nad tím vším něco musí být.',
       'Člověk poznává, že jsou tu pravdy, které jeho rozum uznati musí, že jsou tu dobra, po nichž nutně touží jeho vůle, že jsou tu krásna, jimž nemůže se jeho cit oddati jinak než s láskou. Uvědomuje si soubor **Pravdy, Dobra a Krásna** jako něčeho, co je nad ním, nadindividuálné, ale i nad jinými, nadlidské, ano nadsvětové, absolutní, věčné, božské.',
       'A čím více lidí žije tak, tím více uskutečňuje se království boží na zemi, život dle oněch věčných pravd, vyššího řádu, řádu Pravdy, Dobra a Krásna, jehož hlasatelem jest svědomí.',
     ],
@@ -54,7 +54,7 @@ const kapitoly = [
     label: 'Kapitola II',
     title: 'Disharmonie dneška',
     titleEmphasis: 'dneška',
-    deck: 'Proč dosavadní náboženské formy nestačí. Krize víry po válce, selhání katolicismu i rozumového monismu — a naléhavá potřeba nových cest.',
+    deck: 'Proč dosavadní náboženské formy nestačí. Krize víry po válce, selhání katolicismu i rozumového monismu – a naléhavá potřeba nových cest.',
     calmContent: [
       'Pravým opakem této duchové a náboženské harmonie zítřka jsou poměry dneška. Snad ani v době vzniku křesťanství nebyla krise náboženství tak veliká, jako v době naší, bezradnost v otázkách náboženských a následkem toho i v oceňování hodnot mravních tak tíživá.',
       'Válkou krise náboženská vyvrcholila, ale rozhodla se již, aspoň u vůdčích duchů, ve prospěch **návratu k náboženství**. Vidí se však jasně, že žádná z dosavadních náboženských forem nepostačuje.',
@@ -78,7 +78,7 @@ const kapitoly = [
     magCol2: [
       'Je mnoho lidí u nás, kteří stojí vůči náboženství na stanovisku úplné **negace**. Většinou plynou tyto názory z nevědomosti, neboť náboženstvím je pro ně jen církev katolická.',
       'Vojna ukázala však mnohým absurdnost těchto názorů. Pouhou nevěrou nelze žíti, je potřeba kladného životního názoru, který by dal směr jednání a žití.',
-      'Moderní člověk nemůže slepě věřit autoritě, může uznat jen to, o čem se sám přesvědčí — žádá **zdůvodněného přesvědčení, ne slepé víry**.',
+      'Moderní člověk nemůže slepě věřit autoritě, může uznat jen to, o čem se sám přesvědčí – žádá **zdůvodněného přesvědčení, ne slepé víry**.',
     ],
     aside: {
       label: 'Proč věda nestačí',
@@ -95,7 +95,7 @@ const kapitoly = [
     label: 'Kapitola III',
     title: 'Cesta za souladem',
     titleEmphasis: 'souladem',
-    deck: 'Praktický program nové církve: bez násilí, organickým vývojem, návratem ke Kristu — a vírou, že půda je připravena.',
+    deck: 'Praktický program nové církve: bez násilí, organickým vývojem, návratem ke Kristu – a vírou, že půda je připravena.',
     calmContent: [
       'Vytčený ideál, vysoký cíl by tu byl, ale každý ví, jak příliš vzdáleni jsme dosud onoho stavu harmonie. Pro vzdálený ideál nelze pouštěti se zřetele úkolů dne a den je proniknut disharmonií.',
       'A v tom je právě úkol nejtěžší, jak překlenouti obě propasti, jak z dnešní disharmonie dospěti k souladu, kterou cestou.',
@@ -128,9 +128,9 @@ const kapitoly = [
       text: 'Dílna duše lidské je příliš jemného složení než aby se v ní bez hrozných následků řádilo násilím. **Třeba stavěti na tom, co tu je.** Žijeme za svítání. Není již noc, ale také ne ještě jasný den.',
     },
     box: {
-      title: 'Závěr — vznik církve',
+      title: 'Závěr – vznik církve',
       text: '8. ledna 1920 prohlášena byla **církev československá**, která chce jíti cestou za novými náboženskými ideály a volá všecky lidi dobré vůle k spolupráci.',
-      note: 'Kovář píše o 8. lednu 1920, kdy se schůze reformních kněží usnesla církev založit. Veřejně byla vyhlášena o tři dny později, 11. ledna, v chrámu sv. Mikuláše — proto se na úvodní stránce uvádí toto datum.',
+      note: 'Kovář píše o 8. lednu 1920, kdy se schůze reformních kněží usnesla církev založit. Veřejně byla vyhlášena o tři dny později, 11. ledna, v chrámu sv. Mikuláše – proto se na úvodní stránce uvádí toto datum.',
     },
     reflection: 'Odkládati nelze, třeba jednati brzy a rychle, život je krátký, potřeba vnitřní rovnováhy a bezpečnosti vůči záhadám a různostem života je naléhavá.',
   },
@@ -266,7 +266,7 @@ export default function KralovstviBozi() {
                 {kapitola.quote.text}
               </p>
               <footer className="text-sm text-stone-400 font-sans">
-                — {kapitola.quote.author}
+                – {kapitola.quote.author}
               </footer>
             </blockquote>
           )}
@@ -416,7 +416,7 @@ export default function KralovstviBozi() {
           href="/otcenas"
           className="text-sm font-sans text-[#4a7c6f] hover:text-[#4a7c6f]/70 transition no-underline"
         >
-          Číst také: Výklad Otčenáše — podle patriarchy Kováře →
+          Číst také: Výklad Otčenáše – podle patriarchy Kováře →
         </Link>
       </div>
 
@@ -432,7 +432,7 @@ export default function KralovstviBozi() {
 
       {/* Source attribution */}
       <footer className="text-center py-8 text-xs text-stone-400 font-sans">
-        Podle díla Dr. Františka Kováře „Království boží na zemi — K ideovým základům Církve československé“ (1920)
+        Podle díla Dr. Františka Kováře „Království boží na zemi – K ideovým základům Církve československé“ (1920)
       </footer>
     </div>
   );

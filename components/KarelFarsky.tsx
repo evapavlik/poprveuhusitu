@@ -5,7 +5,7 @@ const timeline = [
   {
     year: "Velikonoce 1919",
     title: "První mše v mateřském jazyce",
-    text: "Farský překládá misál do češtiny — po večerech, při petrolejové lampě. O Velikonocích slouží jako jeden z prvních mši v jazyce, kterému lidé v lavicích rozumějí.",
+    text: "Farský překládá misál do češtiny – po večerech, při petrolejové lampě. O Velikonocích slouží jako jeden z prvních mši v jazyce, kterému lidé v lavicích rozumějí.",
   },
   {
     year: "Vánoce 1919",
@@ -14,18 +14,18 @@ const timeline = [
   },
   {
     year: "1920",
-    title: "Vyhlášení nové církve — chrám sv. Mikuláše",
+    title: "Vyhlášení nové církve – chrám sv. Mikuláše",
     text: "11. ledna 1920 zazní v chrámu sv. Mikuláše na Staroměstském náměstí prohlášení nové, nezávislé Církve československé.",
   },
   {
     year: "1922",
     title: "Farský jako teolog a myslitel",
-    text: "Společně s Františkem Kalousem vydává Československý katechismus — věrouku, která chápe vědu a víru ne jako protivníky, ale jako spojence.",
+    text: "Společně s Františkem Kalousem vydává Československý katechismus – věrouku, která chápe vědu a víru ne jako protivníky, ale jako spojence.",
   },
   {
     year: "1924",
     title: "První biskup-patriarcha",
-    text: "Farský se stává prvním biskupem-patriarchou církve, které zasvětil celý život. Za necelé tři roky umírá ve 46 letech — vyčerpán prací, které se nevzdal.",
+    text: "Farský se stává prvním biskupem-patriarchou církve, které zasvětil celý život. Za necelé tři roky umírá ve 46 letech – vyčerpán prací, které se nevzdal.",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function KarelFarsky() {
           <h2 className="font-lora text-[clamp(34px,4.5vw,58px)] font-bold leading-[1.12] mb-4">
             Muž, který řekl
             <br />
-            <em className="italic text-brick">ne — ale jinak.</em>
+            <em className="italic text-brick">ne – ale jinak.</em>
           </h2>
         </FadeUp>
         <FadeUp>
@@ -69,7 +69,7 @@ export default function KarelFarsky() {
         <FadeUp>
           <p className="text-[17px] font-light leading-[1.8] text-text-muted max-w-[620px] mb-14">
             Karel Farský nebyl rebelant bez vize. Byl to kněz, učitel a člověk,
-            který viděl, že církev ztratila kontakt s lidmi. Nechtěl ji zrušit —
+            který viděl, že církev ztratila kontakt s lidmi. Nechtěl ji zrušit –
             chtěl ji vrátit lidem.
           </p>
         </FadeUp>

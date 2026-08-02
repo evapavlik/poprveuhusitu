@@ -32,12 +32,12 @@ const events = [
   {
     icon: icons.water,
     title: "Křest",
-    text: "Vstup do křesťanského společenství. Křtíme děti i dospělé — po přípravě a rozhovoru s farářem.",
+    text: "Vstup do křesťanského společenství. Křtíme děti i dospělé – po přípravě a rozhovoru s farářem.",
   },
   {
     icon: icons.rings,
     title: "Svatba",
-    text: "Církevní sňatek v CČSH je platný i občansky — nemusíte pak na radnici podruhé. Jen si předem vyzvednete na matrice osvědčení. Oddávat mohou i farářky.",
+    text: "Církevní sňatek v CČSH je platný i občansky – nemusíte pak na radnici podruhé. Jen si předem vyzvednete na matrice osvědčení. Oddávat mohou i farářky.",
   },
   {
     icon: icons.dove,
@@ -47,7 +47,7 @@ const events = [
   {
     icon: icons.chat,
     title: "Rozhovor s farářem",
-    text: "Potřebujete si promluvit? Faráři a farářky CČSH jsou tu pro osobní rozhovor — bez závazků.",
+    text: "Potřebujete si promluvit? Faráři a farářky CČSH jsou tu pro osobní rozhovor – bez závazků.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function LifeEvents() {
         <div className="mt-10 max-w-[560px]">
           <p className="text-sm font-light leading-[1.8] text-text-muted mb-3">
             Cokoliv z toho se dá domluvit napřímo. V seznamu sborů najdete svoje
-            město — na stránce sboru je telefon na faráře nebo farářku.
+            město – na stránce sboru je telefon na faráře nebo farářku.
           </p>
           <FindCongregationLink variant="sage">
             Najít sbor blízko vás

@@ -12,7 +12,7 @@ export default function CtaSection() {
         <em className="italic text-brick">Otázky jsou vítány.</em>
       </h2>
       <p className="text-[17px] font-light text-text-muted max-w-[460px] mx-auto mb-11 leading-[1.75]">
-        Nenabízíme odpovědi na vše. Nabízíme společenství lidí, kteří hledají poctivě — a
+        Nenabízíme odpovědi na vše. Nabízíme společenství lidí, kteří hledají poctivě – a
         víru, která to unese.
       </p>
 
@@ -28,7 +28,7 @@ export default function CtaSection() {
           >
             Napište mi
           </a>{" "}
-          a zeptejte se na cokoli. Nejsem farářka — jsem člověk, který tenhle web
+          a zeptejte se na cokoli. Nejsem farářka – jsem člověk, který tenhle web
           udělal, protože sám hledal.
         </p>
       </div>

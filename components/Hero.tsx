@@ -20,7 +20,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg font-light leading-[1.75] text-text-muted max-w-[520px] mb-13">
-          Husitská církev je otevřená všem — těm, kdo hledají
+          Husitská církev je otevřená všem – těm, kdo hledají
           společenství, kdo si kladou otázky, i těm, kdo si zatím nejsou
           jistí vůbec ničím.
         </p>

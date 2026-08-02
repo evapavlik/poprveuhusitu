@@ -23,7 +23,7 @@ const cormorant = Cormorant_Garamond({
   style: ["normal", "italic"],
 });
 
-const title = "Husitská církev — pro hledající";
+const title = "Husitská církev – pro hledající";
 const description =
   "Církev československá husitská. Otevřená, moderní církev v tradici Jana Husa a české reformace.";
 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description,
     type: "website",
     locale: "cs_CZ",
-    siteName: "Husitská církev — pro hledající",
+    siteName: "Husitská církev – pro hledající",
   },
   twitter: {
     card: "summary_large_image",

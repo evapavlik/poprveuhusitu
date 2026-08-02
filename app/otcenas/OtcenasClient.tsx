@@ -240,7 +240,7 @@ const prosby = [
     ],
     box: {
       title: 'Zbav nás od zlého',
-      text: 'K prosbě za odpuštění hříchů a za ochranu před pokušením přistupuje prosba **za ochranu před zlem vůbec** — fyzickým i mravním.',
+      text: 'K prosbě za odpuštění hříchů a za ochranu před pokušením přistupuje prosba **za ochranu před zlem vůbec** – fyzickým i mravním.',
     },
     aside: {
       label: 'Náš závazek',
@@ -379,7 +379,7 @@ export default function OtcenasPage() {
                 {prosba.quote.text}
               </p>
               <footer className="text-sm text-stone-400 font-sans">
-                — {prosba.quote.author}
+                – {prosba.quote.author}
               </footer>
             </blockquote>
           )}
@@ -526,7 +526,7 @@ export default function OtcenasPage() {
           href="/kralovstvi-bozi"
           className="text-sm font-sans text-[#4a7c6f] hover:text-[#4a7c6f]/70 transition no-underline"
         >
-          Číst také: Království boží na zemi — Kovářův manifest z roku 1920 →
+          Číst také: Království boží na zemi – Kovářův manifest z roku 1920 →
         </a>
       </div>
 
