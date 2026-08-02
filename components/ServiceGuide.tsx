@@ -5,22 +5,22 @@ const steps = [
   {
     num: "00",
     title: "Než to začne",
-    text: "Přijďte klidně o pár minut dřív. Sednout si můžete kamkoli — žádná místa nejsou rezervovaná a zadní lavice jsou úplně v pořádku. Zpěvník bývá v lavici nebo u vchodu.",
+    text: "Přijďte klidně o pár minut dřív. Sednout si můžete kamkoli – žádná místa nejsou rezervovaná a zadní lavice jsou úplně v pořádku. Zpěvník bývá v lavici nebo u vchodu.",
   },
   {
     num: "01",
     title: "Příchod kněze",
-    text: "Lidé povstanou na pozdrav. Nemusíte — nikdo vás nebude kárat. Kostel je místo úcty, ne disciplíny.",
+    text: "Lidé povstanou na pozdrav. Nemusíte – nikdo vás nebude kárat. Kostel je místo úcty, ne disciplíny.",
   },
   {
     num: "02",
     title: "Čtení a kázání",
-    text: "Čtení z Bible a evangelium. Pak kázání — srozumitelné, o tom, co žijeme dnes.",
+    text: "Čtení z Bible a evangelium. Pak kázání – srozumitelné, o tom, co žijeme dnes.",
   },
   {
     num: "03",
     title: "Přijímání",
-    text: "Přijímání pod obojí — chléb i víno. Může přistoupit každý pokřtěný křesťan, bez ohledu na církev. Pokud pokřtění nejste, můžete zůstat sedět, nebo přijít pro požehnání.",
+    text: "Přijímání pod obojí – chléb i víno. Může přistoupit každý pokřtěný křesťan, bez ohledu na církev. Pokud pokřtění nejste, můžete zůstat sedět, nebo přijít pro požehnání.",
   },
   {
     num: "04",
@@ -46,7 +46,7 @@ export default function ServiceGuide() {
       </FadeUp>
       <FadeUp>
         <p className="text-base font-light text-text-muted max-w-[520px] leading-[1.75] mb-13">
-          Nemusíte nic vědět předem. Ale pokud chcete vědět, co vás čeká — tady je to
+          Nemusíte nic vědět předem. Ale pokud chcete vědět, co vás čeká – tady je to
           jednoduše.
         </p>
       </FadeUp>
@@ -73,7 +73,7 @@ export default function ServiceGuide() {
             Vezměte si průvodce s sebou
           </h3>
           <p className="text-sm font-light leading-[1.8] text-text-muted mb-6">
-            Celá bohoslužba krok za krokem — u každého kroku je napsané, co se
+            Celá bohoslužba krok za krokem – u každého kroku je napsané, co se
             právě děje a kdy se vstává. Otevřete si ji v mobilu přímo v lavici.
             Nikdo si toho nevšimne.
           </p>
@@ -92,7 +92,7 @@ export default function ServiceGuide() {
             href="/otcenas"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-sage no-underline hover:text-sage/80 transition-colors"
           >
-            Výklad Otčenáše — podle patriarchy Kováře
+            Výklad Otčenáše – podle patriarchy Kováře
             <span aria-hidden="true">→</span>
           </Link>
         </div>

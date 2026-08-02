@@ -19,11 +19,11 @@ export default function AboutProject() {
             <p>
               Slovo <em className="italic">církev</em> nese nánosy, které mnoha
               lidem brání se vůbec podívat blíž. Často si pod ním představí
-              jen katolickou církev — a tím to pro ně končí.
+              jen katolickou církev – a tím to pro ně končí.
             </p>
             <p>
               Přitom naše husitská církev je svobodné místo k víře. Místo,
-              kde je vítán opravdu každý — věřící, hledající i ten, kdo si
+              kde je vítán opravdu každý – věřící, hledající i ten, kdo si
               zatím není jistý vůbec ničím. Místo, kde mohou sloužit ženy.
               Místo, kde se mluví česky, srozumitelně a bez okázalosti.
             </p>
@@ -33,7 +33,7 @@ export default function AboutProject() {
               kdo teprve zvažují, jestli se přijít podívat.
             </p>
             <p className="text-text font-normal">
-              — Eva Pavlíková
+              – Eva Pavlíková
             </p>
           </div>
         </FadeUp>

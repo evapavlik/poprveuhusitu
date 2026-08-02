@@ -56,7 +56,7 @@ export function FindCongregationSteps({
           <span className="text-brick font-semibold shrink-0">1.</span>
           <span>
             Otevře se seznam sborů na oficiálním webu církve. Nahoře vyberte{" "}
-            <em className="italic">diecézi</em> — je to jen velká oblast podle
+            <em className="italic">diecézi</em> – je to jen velká oblast podle
             nejbližšího z měst: Praha, Hradec Králové, Brno, Olomouc, Plzeň.
           </span>
         </li>
@@ -76,7 +76,7 @@ export function FindCongregationSteps({
   );
 }
 
-/** Nenápadný textový odkaz do adresáře — pro sekce, kde by tlačítko rušilo. */
+/** Nenápadný textový odkaz do adresáře – pro sekce, kde by tlačítko rušilo. */
 export function FindCongregationLink({
   children = "Najít sbor blízko vás",
   variant = "brick",

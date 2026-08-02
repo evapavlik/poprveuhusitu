@@ -6,7 +6,7 @@ import {
 } from "@/components/FindCongregation";
 
 export const metadata: Metadata = {
-  title: "Průvodce bohoslužbou — Husitská církev",
+  title: "Průvodce bohoslužbou – Husitská církev",
   description:
     "Krok za krokem celou bohoslužbou CČSH. Otevřete si na mobilu přímo v lavici.",
 };
@@ -22,7 +22,7 @@ const sections: {
     steps: [
       {
         title: "Příchod kněze",
-        text: "Lidé povstanou na znamení pozdravu. Nemusíte — nikdo si toho nevšimne.",
+        text: "Lidé povstanou na znamení pozdravu. Nemusíte – nikdo si toho nevšimne.",
         note: "vstává se",
       },
       {
@@ -37,11 +37,11 @@ const sections: {
     steps: [
       {
         title: "První čtení z Bible",
-        text: "Kněz nebo lektor přečte úryvek z Bible — většinou ze Starého zákona.",
+        text: "Kněz nebo lektor přečte úryvek z Bible – většinou ze Starého zákona.",
       },
       {
         title: "Přímluvné modlitby",
-        text: 'Zaznívají díky, chvály a prosby. Obec odpovídá krátkými modlitebními zvoláními — česky, řecky nebo staroslověnsky. Slovo AMEN znamená „staň se".',
+        text: 'Zaznívají díky, chvály a prosby. Obec odpovídá krátkými modlitebními zvoláními – česky, řecky nebo staroslověnsky. Slovo AMEN znamená „staň se".',
         tip: 'Kyrie eleison = Pane, smiluj se (řecky). Gospodi pomiluj = totéž staroslověnsky. Smiluj se, Hospodine = česky.',
       },
     ],
@@ -52,13 +52,13 @@ const sections: {
     steps: [
       {
         title: "Druhé čtení z Bible",
-        text: "Další úryvek z Písma — většinou z Nového zákona (epištoly).",
+        text: "Další úryvek z Písma – většinou z Nového zákona (epištoly).",
         tip: "Epištoly jsou dopisy apoštolů prvním křesťanským obcím. Nejznámější jsou listy apoštola Pavla.",
       },
       {
         title: "Blahoslavenství",
         text: "Připomínka toho, jak bychom měli žít. Zpívá se nebo recituje. Mění se podle období liturgického roku.",
-        tip: 'Blahoslavenství pochází z Ježíšova Kázání na hoře. Začíná slovy „Blahoslavení chudí duchem…" — tedy ti, kdo nespoléhají jen na sebe.',
+        tip: 'Blahoslavenství pochází z Ježíšova Kázání na hoře. Začíná slovy „Blahoslavení chudí duchem…" – tedy ti, kdo nespoléhají jen na sebe.',
       },
       {
         title: "Evangelium",
@@ -68,11 +68,11 @@ const sections: {
       },
       {
         title: "Kázání",
-        text: "Výklad právě přečteného textu — co říká do našeho života dnes. Konkrétní, osobní, srozumitelné.",
+        text: "Výklad právě přečteného textu – co říká do našeho života dnes. Konkrétní, osobní, srozumitelné.",
       },
       {
         title: "Vyznání víry",
-        text: "Společná odpověď — vyjadřuje, v koho věříme a ke komu upínáme svou naději.",
+        text: "Společná odpověď – vyjadřuje, v koho věříme a ke komu upínáme svou naději.",
         tip: "CČSH má vlastní Velké vyznání víry, které formuloval Karel Farský. Příležitostně se používá i Apoštolské nebo Nicejsko-cařihradské vyznání.",
       },
     ],
@@ -84,7 +84,7 @@ const sections: {
       {
         title: "Obětování a chvalozpěv",
         text: 'Kněz připraví chléb a víno. Připomínáme si oběť Ježíše Krista za nás. Vděčnost vyjadřujeme chvalozpěvem „Svatý, svatý, svatý".',
-        tip: "Kněz smísí víno s vodou — tento zvyk sahá až k nejstarším křesťanům. Už ve 2. století se při bohoslužbě používal chléb a víno smíšené s vodou.",
+        tip: "Kněz smísí víno s vodou – tento zvyk sahá až k nejstarším křesťanům. Už ve 2. století se při bohoslužbě používal chléb a víno smíšené s vodou.",
       },
     ],
   },
@@ -94,9 +94,9 @@ const sections: {
     steps: [
       {
         title: "Modlitba díků",
-        text: "Lidé povstanou. Velká modlitba díků za zjevení Boží milosti. Následuje zpřítomnění poslední večeře Ježíše s učedníky — kněz pozvedá chléb a víno. Po zpřítomnění se usedá.",
+        text: "Lidé povstanou. Velká modlitba díků za zjevení Boží milosti. Následuje zpřítomnění poslední večeře Ježíše s učedníky – kněz pozvedá chléb a víno. Po zpřítomnění se usedá.",
         note: "vstává se",
-        tip: 'Uslyšíte možná slovo eucharistie — řecky doslova „díkůvzdání". Je to jen jiný název pro přijímání. Jde o zpřítomnění, ne opakování poslední večeře.',
+        tip: 'Uslyšíte možná slovo eucharistie – řecky doslova „díkůvzdání". Je to jen jiný název pro přijímání. Jde o zpřítomnění, ne opakování poslední večeře.',
       },
     ],
   },
@@ -119,9 +119,9 @@ const sections: {
     steps: [
       {
         title: "Přijímání",
-        text: "K přijímání může přistoupit každý pokřtěný křesťan, bez ohledu na církev. Kněz podává kousek chleba namočený ve víně. Děti a ti, kdo nechtějí přistoupit, dostanou požehnání — křížek na čelo. Pokud pokřtění nejste, můžete klidně zůstat sedět.",
+        text: "K přijímání může přistoupit každý pokřtěný křesťan, bez ohledu na církev. Kněz podává kousek chleba namočený ve víně. Děti a ti, kdo nechtějí přistoupit, dostanou požehnání – křížek na čelo. Pokud pokřtění nejste, můžete klidně zůstat sedět.",
         note: "otevřené všem pokřtěným",
-        tip: 'Přijímání „pod obojí" (chléb i víno) je základní znak husitské tradice — od dob Jana Husa. Chlebu se říká hostie; je nekvašený, tenký jako oplatka.',
+        tip: 'Přijímání „pod obojí" (chléb i víno) je základní znak husitské tradice – od dob Jana Husa. Chlebu se říká hostie; je nekvašený, tenký jako oplatka.',
       },
     ],
   },
@@ -131,7 +131,7 @@ const sections: {
     steps: [
       {
         title: "Požehnání",
-        text: "Lidé povstanou. Závěrečné požehnání do každodenního života — s přáním Boží ochrany a pomoci. Po požehnání se usedá.",
+        text: "Lidé povstanou. Závěrečné požehnání do každodenního života – s přáním Boží ochrany a pomoci. Po požehnání se usedá.",
         note: "vstává se",
       },
       {
@@ -171,7 +171,7 @@ export default function PruvodcePage() {
         <div className="bg-sage-pale border border-sage/15 rounded-xl px-5 py-4">
           <p className="text-[13px] leading-[1.75] text-sage font-medium">
             💡 Zpěvník máte k dispozici v lavici nebo u vchodu. Text celé bohoslužby
-            s odpověďmi najdete od strany 633. Nemusíte se aktivně zapojovat — stačí být.
+            s odpověďmi najdete od strany 633. Nemusíte se aktivně zapojovat – stačí být.
           </p>
         </div>
       </header>

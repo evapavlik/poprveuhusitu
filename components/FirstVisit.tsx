@@ -41,12 +41,12 @@ const cards = [
   {
     icon: icons.bread,
     title: "Přijímání napříč církvemi",
-    text: "K přijímání může přistoupit každý pokřtěný křesťan, bez ohledu na církev — v mnoha jiných církvích to možné není. Pokud pokřtění nejste, můžete zůstat sedět, nebo přijít pro požehnání.",
+    text: "K přijímání může přistoupit každý pokřtěný křesťan, bez ohledu na církev – v mnoha jiných církvích to možné není. Pokud pokřtění nejste, můžete zůstat sedět, nebo přijít pro požehnání.",
   },
   {
     icon: icons.heart,
     title: "Nemusíte se aktivně zapojovat",
-    text: "Stačí přijít, sednout, být. Nechte se oslovit. Bohoslužba je tu pro vás — ne vy pro ni.",
+    text: "Stačí přijít, sednout, být. Nechte se oslovit. Bohoslužba je tu pro vás – ne vy pro ni.",
   },
 ];
 

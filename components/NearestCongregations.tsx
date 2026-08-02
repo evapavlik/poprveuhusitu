@@ -105,7 +105,7 @@ export default function NearestCongregations() {
       () =>
         setStav({
           typ: "chyba",
-          zprava: "Polohu se nepodařilo zjistit — možná ji máte zakázanou. Napište prosím město.",
+          zprava: "Polohu se nepodařilo zjistit – možná ji máte zakázanou. Napište prosím město.",
         }),
       { timeout: 10000, maximumAge: 300000 }
     );
@@ -261,7 +261,7 @@ export default function NearestCongregations() {
                 ))}
               </ol>
               <p className="mt-4 text-[12px] font-light leading-[1.7] text-text-muted">
-                Vzdálenost je vzdušnou čarou. Uvedená adresa je kontaktní —
+                Vzdálenost je vzdušnou čarou. Uvedená adresa je kontaktní –
                 bohoslužba někdy bývá jinde ve městě. Údaje i fotografie
                 pocházejí z oficiálního adresáře CČSH.
               </p>

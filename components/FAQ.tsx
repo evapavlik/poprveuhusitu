@@ -11,7 +11,7 @@ const faqs: { q: string; a: ReactNode }[] = [
   },
   {
     q: "Nejsem pokřtěný/á. Můžu vůbec přijít?",
-    a: "Ano. Křest není podmínkou návštěvy — týká se jen přijímání. Když ostatní jdou k přijímání, můžete zůstat sedět, nebo jít s nimi a přijmout požehnání. Obojí je naprosto v pořádku a nikdo to nebude řešit.",
+    a: "Ano. Křest není podmínkou návštěvy – týká se jen přijímání. Když ostatní jdou k přijímání, můžete zůstat sedět, nebo jít s nimi a přijmout požehnání. Obojí je naprosto v pořádku a nikdo to nebude řešit.",
   },
   {
     q: "Co si mám obléct?",
@@ -19,7 +19,7 @@ const faqs: { q: string; a: ReactNode }[] = [
   },
   {
     q: "Bude se po mně chtít, abych přispěl/a?",
-    a: "Během bohoslužby se koná sbírka. Přispět ale nemusíte a nikdo nekontroluje, jestli jste přispěli — není to vstupné. Když košíček prostě podáte dál, nikdo se nepozastaví.",
+    a: "Během bohoslužby se koná sbírka. Přispět ale nemusíte a nikdo nekontroluje, jestli jste přispěli – není to vstupné. Když košíček prostě podáte dál, nikdo se nepozastaví.",
   },
   {
     q: "Bude mě někdo oslovovat, když nikoho neznám?",
@@ -64,7 +64,7 @@ export default function FAQ() {
       </FadeUp>
       <FadeUp>
         <h2 className="font-lora text-[clamp(30px,3.5vw,46px)] font-bold leading-[1.2] mb-12 max-w-[560px]">
-          Ptáte se —{" "}
+          Ptáte se –{" "}
           <em className="italic text-brick">odpovídáme.</em>
         </h2>
       </FadeUp>
