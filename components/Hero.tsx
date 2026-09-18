@@ -31,9 +31,13 @@ export default function Hero() {
           {/* Datace místo štítku s tečkou. Pilulka s prostrkanými verzálkami je
               podpis šablony a neříkala nic, co není o kus výš v navigaci.
               Datum a místo založení odpovídá na otázku, kterou má návštěvník
-              hned po „co to je za církev". */}
+              hned po „co to je za církev".
+
+              Tmavě, ne červeně: na mobilu stojí datace přímo pod červeným logem
+              v navigaci a nad červenou kurzívou v nadpisu. Tři červené prvky nad
+              sebou se přebíjely. Červená v nadpisu nese sdělení, tohle je fakt. */}
           <div className="mb-8">
-            <p className="font-lora text-[17px] font-semibold text-brick leading-tight">
+            <p className="font-lora text-[17px] font-semibold text-text leading-tight">
               Církev československá husitská
             </p>
             <p className="text-[13px] font-light text-text-muted mt-1.5 tracking-[0.02em]">
