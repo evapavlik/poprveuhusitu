@@ -23,7 +23,9 @@ const cormorant = Cormorant_Garamond({
   style: ["normal", "italic"],
 });
 
-const title = "Husitská církev – pro hledající";
+// Jméno webu i plný název církve v jednom: v záložce prohlížeče i ve
+// výsledcích vyhledávání pak stojí totéž, co je vidět v liště.
+const title = "Poprvé u husitů – Církev československá husitská";
 const description =
   "Církev československá husitská. Otevřená, moderní církev v tradici Jana Husa a české reformace.";
 

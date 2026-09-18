@@ -278,8 +278,10 @@ nad nadpisem. Dřív byl třikrát: v liště, v dataci a potřetí v perexu
 
 Web se jmenuje **Poprvé u husitů** (podle domény). Není to církev a v liště se
 za ni nevydává — patička říká, že oficiální stránkou CČSH není. `siteName`
-v OG metadatech je také „Poprvé u husitů"; `<title>` zůstává „Husitská církev
-– pro hledající" kvůli vyhledávání.
+v OG metadatech je „Poprvé u husitů", `<title>` úvodní stránky je
+„Poprvé u husitů – Církev československá husitská" — obsahuje obě jména,
+takže záložka prohlížeče i výsledek ve vyhledávání říkají totéž, co je
+vidět v liště. Podstránky si drží vlastní titulky podle tématu.
 
 ### Jazyková pravidla
 - **Žádné archaismy** — text musí být srozumitelný pro člověka, který nikdy nebyl v kostele
