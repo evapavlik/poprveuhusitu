@@ -1,4 +1,5 @@
 import FadeUp from "./FadeUp";
+import Section, { SectionLabel, NADPIS_2 } from "./Section";
 import { FindCongregationLink } from "./FindCongregation";
 
 const icons = {
@@ -53,30 +54,27 @@ const events = [
 
 export default function LifeEvents() {
   return (
-    <section className="py-[100px] px-6 md:px-12 bg-sage-pale">
+    <Section tone="cream" top="lg" bottom="md">
       <FadeUp>
-        <div className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-sage mb-5 before:content-[''] before:w-5 before:h-0.5 before:bg-sage before:rounded-sm">
-          Životní události
-        </div>
+        <SectionLabel variant="sage">Životní události</SectionLabel>
       </FadeUp>
       <FadeUp>
-        <h2 className="font-lora text-[clamp(30px,3.5vw,46px)] font-bold leading-[1.2] mb-12 max-w-[560px]">
-          Provázíme vás{" "}
-          <em className="italic text-sage">důležitými chvílemi.</em>
+        <h2 className={`${NADPIS_2} mb-12 max-w-[560px]`}>
+          Provázíme vás důležitými chvílemi.
         </h2>
       </FadeUp>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {events.map((event, i) => (
           <FadeUp key={event.title} delay={i * 70}>
-            <div className="bg-white border border-border rounded-xl px-7 py-8 hover:shadow-[0_8px_30px_rgba(74,124,111,0.08)] hover:-translate-y-0.5 transition-all duration-[250ms]">
+            <div className="h-full bg-white border border-border rounded-xl px-7 py-8 hover:shadow-[0_8px_30px_rgba(74,124,111,0.08)] hover:-translate-y-0.5 transition-all duration-[250ms]">
               <div className="w-11 h-11 rounded-[10px] bg-sage/10 flex items-center justify-center text-sage mb-5">
                 {event.icon}
               </div>
-              <h3 className="font-lora text-lg font-semibold mb-2">
+              <h3 className="font-lora text-[19px] font-semibold mb-2">
                 {event.title}
               </h3>
-              <p className="text-sm font-light leading-[1.8] text-text-muted">
+              <p className="text-[15px] font-light leading-[1.75] text-text-muted">
                 {event.text}
               </p>
             </div>
@@ -86,7 +84,7 @@ export default function LifeEvents() {
 
       <FadeUp>
         <div className="mt-10 max-w-[560px]">
-          <p className="text-sm font-light leading-[1.8] text-text-muted mb-3">
+          <p className="text-[15px] font-light leading-[1.8] text-text-muted mb-3">
             Cokoliv z toho se dá domluvit napřímo. V seznamu sborů najdete svoje
             město – na stránce sboru je telefon na faráře nebo farářku.
           </p>
@@ -95,6 +93,6 @@ export default function LifeEvents() {
           </FindCongregationLink>
         </div>
       </FadeUp>
-    </section>
+    </Section>
   );
 }

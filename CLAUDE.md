@@ -89,6 +89,50 @@ Speciální citáty:   Cormorant Garamond — italika pro velké citáty (Google
 - **Marquee band** pod hero sekcí — živá červená, klíčová slova v pohybu
 - Inspirace vizuálem: https://www.praya.app/farnost.html (struktura, ne barvy)
 
+### Rytmus stránky — ZÁVAZNÉ
+
+Pozadí se nestřídá po každé sekci. Tón pozadí říká, **která kapitola** právě běží;
+vlásková linka říká, že uvnitř kapitoly začíná další sekce.
+
+| Kapitola | Tón | Sekce |
+|---|---|---|
+| Kdo jsme a odkud | `white` | Kdo jsme, Karel Farský |
+| Co vás čeká | `off-white` | Co vás čeká poprvé, Proč dnes, Průvodce, FAQ |
+| Vstup a autorka | `cream` | Životní události, O tomto webu |
+
+Mezi kapitolami stojí **interpunkce** — sytá plocha, která dělá zlom:
+červený marquee pod hero, zelený citát Farského, `brick-pale` závěrečné CTA,
+tmavá patička. `sage-pale` zůstává jen pro box témat v sekci „Proč dnes".
+
+Tři pravidla, která platí bez výjimky:
+1. **Jedna osa.** Každá sekce jde přes `components/Section.tsx`, který drží
+   `max-w-[1180px] mx-auto`. Žádná sekce si šířku neřeší sama — dřív se text
+   při scrollování posouval do stran.
+2. **Dvě úrovně nadpisů.** `NADPIS_1` pro nosné sekce (Kdo jsme, Farský,
+   Co vás čeká, závěrečné CTA), `NADPIS_2` pro zbytek. Ne všechny sekce mají
+   stejnou váhu.
+3. **Červená kurzíva v nadpisu jen tam, kde nese sdělení.** Zůstává na čtyřech
+   místech (hero, Kdo jsme, Farský, CTA). Osmkrát na jedné stránce je manýra.
+
+### Typografická škála — ZÁVAZNÁ
+
+Jiné velikosti na stránce nepoužívat. Dřív jich bylo v oběhu deset (11, 13, 14,
+15, 16, 17, 19, 52 px) bez pravidla, podle čeho se vybírá.
+
+| Role | Velikost | Řez |
+|---|---|---|
+| Štítek nad nadpisem (`SectionLabel`) | 12 px | 600, verzálky, tracking .2em |
+| H1 | `clamp(40px,5.5vw,68px)` | 700 |
+| H2 nosné sekce (`NADPIS_1`) | `clamp(32px,4vw,50px)` | 700 |
+| H2 ostatní (`NADPIS_2`) | `clamp(26px,3vw,38px)` | 700 |
+| H3 / nadpis karty | 19 px | 600 |
+| Perex a hlavní text | 17 px | 300 |
+| Text v kartách a seznamech | 15 px | 300 |
+| Popisky, data, meta | 13 px | 500 |
+
+Odsazení sekcí je responzivní (`Section` prop `top` / `bottom`): na mobilu
+48–80 px, na desktopu 56–112 px. Pevných `py-[100px]` se na mobilu nedrží.
+
 ---
 
 ## Struktura stránky — sekce v pořadí
@@ -179,6 +223,7 @@ app/
   layout.tsx            # fonty, metadata
   globals.css           # CSS proměnné, base styles, marquee animace
 components/
+  Section.tsx           # kostra sekce (šířka, tón, odsazení) + SectionLabel + NADPIS_1/2
   Nav.tsx               # fixní navigace
   Hero.tsx              # hero sekce s CTA
   MarqueeBand.tsx       # červený marquee pás

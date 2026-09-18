@@ -1,21 +1,18 @@
 import FadeUp from "./FadeUp";
+import Section, { SectionLabel, NADPIS_2 } from "./Section";
 
 export default function AboutProject() {
   return (
-    <section className="py-[100px] px-6 md:px-12 bg-cream">
+    <Section tone="cream" top="md" bottom="lg" divider>
       <div className="max-w-[620px]">
         <FadeUp>
-          <div className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-brick mb-5 before:content-[''] before:w-5 before:h-0.5 before:bg-brick before:rounded-sm">
-            O tomto webu
-          </div>
+          <SectionLabel>O tomto webu</SectionLabel>
         </FadeUp>
         <FadeUp>
-          <h2 className="font-lora text-[clamp(26px,3vw,36px)] font-bold leading-[1.3] mb-8">
-            Proč tato stránka vznikla.
-          </h2>
+          <h2 className={`${NADPIS_2} mb-8`}>Proč tato stránka vznikla.</h2>
         </FadeUp>
         <FadeUp>
-          <div className="space-y-5 text-[15px] font-light leading-[1.85] text-text-muted">
+          <div className="space-y-5 text-[17px] font-light leading-[1.8] text-text-muted">
             <p>
               Slovo <em className="italic">církev</em> nese nánosy, které mnoha
               lidem brání se vůbec podívat blíž. Často si pod ním představí
@@ -32,12 +29,10 @@ export default function AboutProject() {
               mluví k těm, kdo už věří. Tato stránka se snaží mluvit k těm,
               kdo teprve zvažují, jestli se přijít podívat.
             </p>
-            <p className="text-text font-normal">
-              – Eva Pavlíková
-            </p>
+            <p className="text-text font-normal">– Eva Pavlíková</p>
           </div>
         </FadeUp>
       </div>
-    </section>
+    </Section>
   );
 }

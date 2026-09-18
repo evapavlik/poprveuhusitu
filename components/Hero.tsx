@@ -25,7 +25,7 @@ const odlisnosti = [
 
 export default function Hero() {
   return (
-    <section className="px-6 md:px-12 pt-28 pb-20 md:pt-32 md:pb-24 bg-off-white">
+    <section className="px-6 md:px-12 pt-28 pb-20 md:pt-32 md:pb-28 bg-off-white">
       <div className="max-w-[1180px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 lg:items-center">
         <div>
           <div className="inline-flex items-center gap-2.5 bg-brick-pale text-brick text-xs font-semibold tracking-[0.12em] uppercase px-4 py-2 rounded-full mb-8">
@@ -63,16 +63,16 @@ export default function Hero() {
         </div>
 
         <div>
-          <p className="text-[11px] font-semibold tracking-[0.15em] uppercase text-brick mb-6">
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-brick mb-6">
             Čím se lišíme
           </p>
-          <ul className="list-none space-y-5">
+          <ul className="list-none space-y-6">
             {odlisnosti.map((o) => (
               <li key={o.co} className="border-l-2 border-brick/25 pl-5">
-                <p className="font-lora text-[17px] font-semibold leading-[1.3] mb-1">
+                <p className="font-lora text-[19px] font-semibold leading-[1.3] mb-1.5">
                   {o.co}
                 </p>
-                <p className="text-[13px] font-light leading-[1.65] text-text-muted">
+                <p className="text-[15px] font-light leading-[1.7] text-text-muted">
                   {o.detail}
                 </p>
               </li>

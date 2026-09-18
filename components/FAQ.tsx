@@ -2,6 +2,7 @@
 
 import { useState, type ReactNode } from "react";
 import FadeUp from "./FadeUp";
+import Section, { SectionLabel, NADPIS_2 } from "./Section";
 import { FindCongregationLink } from "./FindCongregation";
 
 const faqs: { q: string; a: ReactNode }[] = [
@@ -56,17 +57,12 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-[100px] px-6 md:px-12 bg-white">
+    <Section tone="off-white" top="md" bottom="md" divider>
       <FadeUp>
-        <div className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-brick mb-5 before:content-[''] before:w-5 before:h-0.5 before:bg-brick before:rounded-sm">
-          Časté otázky
-        </div>
+        <SectionLabel>Časté otázky</SectionLabel>
       </FadeUp>
       <FadeUp>
-        <h2 className="font-lora text-[clamp(30px,3.5vw,46px)] font-bold leading-[1.2] mb-12 max-w-[560px]">
-          Ptáte se –{" "}
-          <em className="italic text-brick">odpovídáme.</em>
-        </h2>
+        <h2 className={`${NADPIS_2} mb-12 max-w-[560px]`}>Ptáte se – odpovídáme.</h2>
       </FadeUp>
 
       <div className="max-w-[720px]">
@@ -82,7 +78,7 @@ export default function FAQ() {
                   aria-controls={`faq-odpoved-${i}`}
                   className="w-full flex items-center justify-between py-6 text-left cursor-pointer bg-transparent border-none"
                 >
-                  <span className="font-lora text-[17px] font-semibold pr-8">
+                  <span className="font-lora text-[19px] font-semibold pr-8">
                     {faq.q}
                   </span>
                   <span
@@ -104,7 +100,7 @@ export default function FAQ() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="text-sm font-light leading-[1.8] text-text-muted">
+                    <div className="text-[15px] font-light leading-[1.8] text-text-muted">
                       {faq.a}
                     </div>
                   </div>
@@ -114,6 +110,6 @@ export default function FAQ() {
           );
         })}
       </div>
-    </section>
+    </Section>
   );
 }
