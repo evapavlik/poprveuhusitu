@@ -152,7 +152,10 @@ Odsazení sekcí je responzivní (`Section` prop `top` / `bottom`): na mobilu
   tečkou je podpis šablony a neříká nic, co není v navigaci. Nevracet.
 - H1: „Víra, která se nebojí otázek."
 - Perex: krátký, přívětivý, pro hledající
-- CTA tlačítka: „Poznejte nás" (primary) + „Jak vypadá bohoslužba" (ghost)
+- CTA: **jedno** tlačítko „Jak vypadá bohoslužba" (→ `#bohosluzba`) + tichý
+  textový odkaz „Časté otázky →" (→ `#otazky`)
+- ⚠️ **Žádná dvojice „plné + obrysové tlačítko".** Je to podpis šablony.
+  Odkaz v hero nesmí mířit na sekci hned pod hero — to čtenář udělá scrollem.
 - Pozadí: off-white s jemnými radiálními gradienty (červená + sage)
 
 ### 3. Marquee band

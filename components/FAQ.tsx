@@ -57,7 +57,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <Section tone="off-white" top="md" bottom="md" divider>
+    <Section id="otazky" tone="off-white" top="md" bottom="md" divider>
       <FadeUp>
         <SectionLabel>Časté otázky</SectionLabel>
       </FadeUp>

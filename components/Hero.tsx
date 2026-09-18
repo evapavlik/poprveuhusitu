@@ -58,18 +58,25 @@ export default function Hero() {
             otázky, i těm, kdo si zatím nejsou jistí vůbec ničím.
           </p>
 
-          <div className="flex gap-3 flex-wrap items-center">
-            <a
-              href="#co-jsme"
-              className="bg-brick text-white font-jakarta text-sm font-semibold px-7 py-3.5 rounded-md no-underline inline-block hover:bg-brick-light hover:-translate-y-px transition-all duration-200"
-            >
-              Poznejte nás
-            </a>
+          {/* Dřív tu stála dvojice „plné + obrysové tlačítko". Kromě toho, že je
+              to nejopisovanější prvek šablon, nesla plná červená odkaz
+              „Poznejte nás" mířící na sekci hned pod hero — tedy na to, co
+              čtenář udělá scrollem sám. Teď je červená na jediné zkratce,
+              která stojí za kliknutí, a druhý cíl je tichý textový odkaz
+              ve stejném tvaru, jaký používá zbytek stránky. */}
+          <div className="flex gap-6 flex-wrap items-center">
             <a
               href="#bohosluzba"
-              className="bg-transparent text-text-muted font-jakarta text-sm font-medium px-7 py-3.5 border-[1.5px] border-border-strong rounded-md no-underline inline-block hover:border-brick hover:text-brick transition-all duration-200"
+              className="bg-brick text-white font-jakarta text-sm font-semibold px-7 py-3.5 rounded-md no-underline inline-block hover:bg-brick-light hover:-translate-y-px transition-all duration-200"
             >
               Jak vypadá bohoslužba
+            </a>
+            <a
+              href="#otazky"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-sage no-underline hover:text-sage/80 transition-colors"
+            >
+              Časté otázky
+              <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
