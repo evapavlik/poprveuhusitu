@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description,
     type: "website",
     locale: "cs_CZ",
-    siteName: "Husitská církev – pro hledající",
+    siteName: "Poprvé u husitů",
   },
   twitter: {
     card: "summary_large_image",

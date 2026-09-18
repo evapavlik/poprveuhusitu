@@ -54,8 +54,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-[17px] font-light leading-[1.75] text-text-muted max-w-[460px] mb-9">
-            Husitská církev je otevřená všem – těm, kdo hledají společenství, kdo
-            si kladou otázky, i těm, kdo si zatím nejsou jistí vůbec ničím.
+            Jsme otevření všem – těm, kdo hledají společenství, kdo si kladou
+            otázky, i těm, kdo si zatím nejsou jistí vůbec ničím.
           </p>
 
           <div className="flex gap-3 flex-wrap items-center">

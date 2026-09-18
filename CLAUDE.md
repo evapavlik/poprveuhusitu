@@ -139,7 +139,7 @@ Odsazení sekcí je responzivní (`Section` prop `top` / `bottom`): na mobilu
 
 ### 1. `<nav>` — Navigace
 - Fixní, bílá s backdrop-filter blur
-- Logo: „Husitská církev · CČSH" v Loře, červená
+- Logo: **„Poprvé u husitů"** v Loře, červená — lišta pojmenuje **web**, ne církev
 - Odkazy: Kdo jsme / Karel Farský / Bohoslužba / Dnes / Kontakt
 
 ### 2. `<hero>` — Hero sekce
@@ -206,7 +206,7 @@ Odsazení sekcí je responzivní (`Section` prop `top` / `bottom`): na mobilu
 
 ### 13. Footer
 - Tmavý, jednoduchý
-- Logo text „Husitská církev · CČSH"
+- Logo text „Poprvé u husitů" — stejné jméno jako v liště
 - Disclaimer: „Soukromý projekt · Není oficiální stránkou CČSH" (odkaz na ccsh.cz)
 - ⚠️ **Žádné ®, ©, ani adresa sídla** — tohle je soukromá iniciativa, ne oficiální web
 
@@ -263,6 +263,23 @@ CLAUDE.md               # tento soubor
 | souputníci | spojenci / společně |
 | nekáře | nebude kárat |
 | blahoslavenství (bez kontextu) | konkrétní popis čtení |
+
+### Název církve na první obrazovce — ZÁVAZNÉ
+
+Plný název církve stojí na úvodní obrazovce **právě jednou**, a to v dataci
+nad nadpisem. Dřív byl třikrát: v liště, v dataci a potřetí v perexu
+(„Husitská církev je otevřená všem…"). Každý slot má jinou práci:
+
+| Slot | Text | Co dělá |
+|---|---|---|
+| Lišta | Poprvé u husitů | říká, na jakém webu jsem |
+| Datace | Církev československá husitská | říká, o jaké církvi je řeč |
+| Perex | „Jsme otevření všem…" | mluví ke čtenáři, nepředstavuje se znovu |
+
+Web se jmenuje **Poprvé u husitů** (podle domény). Není to církev a v liště se
+za ni nevydává — patička říká, že oficiální stránkou CČSH není. `siteName`
+v OG metadatech je také „Poprvé u husitů"; `<title>` zůstává „Husitská církev
+– pro hledající" kvůli vyhledávání.
 
 ### Jazyková pravidla
 - **Žádné archaismy** — text musí být srozumitelný pro člověka, který nikdy nebyl v kostele

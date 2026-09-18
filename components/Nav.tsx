@@ -38,12 +38,16 @@ export default function Nav() {
           takže se logo neláme, ale dokud je místo, zůstávají stejně široké
           a prostřední sloupec sedí na ose. */}
       <div className="px-6 lg:px-12 h-[68px] grid grid-cols-[1fr_auto] lg:grid-cols-[minmax(max-content,1fr)_auto_minmax(max-content,1fr)] items-center gap-6">
+        {/* Lišta pojmenuje web, ne církev. Dřív tu stálo „Husitská církev · CČSH",
+            takže se název církve objevil na první obrazovce třikrát (lišta,
+            datace v hero, perex) — a web se v liště představoval jako církev,
+            ačkoli patička říká, že oficiální stránkou CČSH není. */}
         <Link
           href="/"
           className="font-lora text-[15px] font-semibold text-brick no-underline justify-self-start whitespace-nowrap"
           onClick={() => setOpen(false)}
         >
-          Husitská církev · CČSH
+          Poprvé u husitů
         </Link>
 
         {/* Plná navigace se zapíná až na lg (1024 px). Na md (768) se šest
