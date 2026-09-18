@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FadeUp from "./FadeUp";
+import Section, { SectionLabel, NADPIS_2 } from "./Section";
 
 const steps = [
   {
@@ -31,35 +32,35 @@ const steps = [
 
 export default function ServiceGuide() {
   return (
-    <section className="py-[100px] px-6 md:px-12 bg-off-white" id="pruvodce">
+    <Section id="pruvodce" tone="off-white" top="md" bottom="md" divider>
       <FadeUp>
-        <div className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-brick mb-5 before:content-[''] before:w-5 before:h-0.5 before:bg-brick before:rounded-sm">
-          Průvodce první návštěvou
-        </div>
+        <SectionLabel>Průvodce první návštěvou</SectionLabel>
       </FadeUp>
       <FadeUp>
-        <h2 className="font-lora text-[clamp(30px,3.5vw,46px)] font-bold mb-3">
+        <h2 className={`${NADPIS_2} mb-3`}>
           Jak to chodí
           <br />
           na bohoslužbě.
         </h2>
       </FadeUp>
       <FadeUp>
-        <p className="text-base font-light text-text-muted max-w-[520px] leading-[1.75] mb-13">
+        <p className="text-[17px] font-light text-text-muted max-w-[520px] leading-[1.8] mb-12">
           Nemusíte nic vědět předem. Ale pokud chcete vědět, co vás čeká – tady je to
           jednoduše.
         </p>
       </FadeUp>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      {/* Pět karet vedle sebe vycházelo na 1024 px na ~180 px šířky s textem
+          13 px. Pět sloupců se proto zapíná až na xl. */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
         {steps.map((step, i) => (
           <FadeUp key={step.num} delay={i * 70}>
-            <div className="bg-white border border-border rounded-xl px-6 py-8">
-              <div className="font-cormorant text-[52px] font-semibold text-brick-pale leading-none mb-5">
+            <div className="h-full bg-white border border-border rounded-xl px-6 py-8">
+              <div className="font-cormorant text-[48px] font-semibold text-brick/25 leading-none mb-5">
                 {step.num}
               </div>
-              <h4 className="font-lora text-[17px] font-semibold mb-2">{step.title}</h4>
-              <p className="text-[13px] font-light leading-[1.75] text-text-muted">
+              <h3 className="font-lora text-[17px] font-semibold mb-2">{step.title}</h3>
+              <p className="text-[15px] font-light leading-[1.7] text-text-muted">
                 {step.text}
               </p>
             </div>
@@ -69,10 +70,10 @@ export default function ServiceGuide() {
 
       <FadeUp>
         <div className="mt-10 bg-white border border-brick/15 rounded-xl px-7 py-8 max-w-[620px]">
-          <h3 className="font-lora text-lg font-semibold mb-2.5">
+          <h3 className="font-lora text-[19px] font-semibold mb-2.5">
             Vezměte si průvodce s sebou
           </h3>
-          <p className="text-sm font-light leading-[1.8] text-text-muted mb-6">
+          <p className="text-[15px] font-light leading-[1.75] text-text-muted mb-6">
             Celá bohoslužba krok za krokem – u každého kroku je napsané, co se
             právě děje a kdy se vstává. Otevřete si ji v mobilu přímo v lavici.
             Nikdo si toho nevšimne.
@@ -97,6 +98,6 @@ export default function ServiceGuide() {
           </Link>
         </div>
       </FadeUp>
-    </section>
+    </Section>
   );
 }

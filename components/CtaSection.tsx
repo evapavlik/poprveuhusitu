@@ -1,17 +1,18 @@
 import NearestCongregations from "./NearestCongregations";
+import { NADPIS_1 } from "./Section";
 
 export default function CtaSection() {
   return (
     <section
-      className="bg-brick-pale py-[100px] px-6 md:px-12 text-center border-t border-brick/12"
+      className="bg-brick-pale py-20 md:py-28 px-6 md:px-12 text-center border-t border-brick/12"
       id="kontakt"
     >
-      <h2 className="font-lora text-[clamp(32px,4vw,54px)] font-bold leading-[1.15] mb-5">
+      <h2 className={`${NADPIS_1} mb-5`}>
         Přijďte.
         <br />
         <em className="italic text-brick">Otázky jsou vítány.</em>
       </h2>
-      <p className="text-[17px] font-light text-text-muted max-w-[460px] mx-auto mb-11 leading-[1.75]">
+      <p className="text-[17px] font-light text-text-muted max-w-[460px] mx-auto mb-11 leading-[1.8]">
         Nenabízíme odpovědi na vše. Nabízíme společenství lidí, kteří hledají poctivě – a
         víru, která to unese.
       </p>

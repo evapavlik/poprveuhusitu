@@ -1,5 +1,6 @@
 import FadeUp from "./FadeUp";
 import Link from "next/link";
+import Section, { SectionLabel, NADPIS_2 } from "./Section";
 
 const themes = [
   {
@@ -22,23 +23,21 @@ const themes = [
 
 export default function Contemporary() {
   return (
-    <section className="py-[100px] px-6 md:px-12 bg-white" id="dnes">
+    <Section id="dnes" tone="off-white" top="md" bottom="md" divider>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-start">
         <div>
           <FadeUp>
-            <div className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-brick mb-5 before:content-[''] before:w-5 before:h-0.5 before:bg-brick before:rounded-sm">
-              Proč dnes
-            </div>
+            <SectionLabel>Proč dnes</SectionLabel>
           </FadeUp>
           <FadeUp>
-            <h2 className="font-lora text-[clamp(30px,3.5vw,46px)] font-bold leading-[1.2] mb-6">
-              Farského slova zní
+            <h2 className={`${NADPIS_2} mb-6`}>
+              Farského slova platí
               <br />
-              i v roce <em className="italic text-brick">2026.</em>
+              i po sto letech.
             </h2>
           </FadeUp>
           <FadeUp>
-            <p className="text-base font-light leading-[1.85] text-text-muted mb-4">
+            <p className="text-[17px] font-light leading-[1.8] text-text-muted mb-4">
               Farský psal o korupci, která rozkládá společnost. O stranickém
               kompromisnictví. O odpuštění jako radikálním činu. O solidaritě, která nesmí
               být jen rétorika. Čteme ho dnes – a je to jako číst dnešní noviny, jen s
@@ -46,7 +45,7 @@ export default function Contemporary() {
             </p>
           </FadeUp>
           <FadeUp>
-            <p className="text-base font-light leading-[1.85] text-text-muted mb-6">
+            <p className="text-[17px] font-light leading-[1.8] text-text-muted mb-8">
               Husitská církev vždy věřila, že křesťanství není útočiště před světem. Je to
               výzva žít ve světě jinak.
             </p>
@@ -71,7 +70,7 @@ export default function Contemporary() {
         </div>
 
         <FadeUp>
-          <div className="bg-sage-pale rounded-2xl p-10">
+          <div className="bg-sage-pale rounded-2xl p-8 md:p-10">
             {themes.map((theme, i) => (
               <div
                 key={theme.title}
@@ -83,10 +82,10 @@ export default function Contemporary() {
                     : "border-b border-sage/15"
                 }`}
               >
-                <h4 className="font-lora text-[17px] font-semibold text-sage mb-1.5">
+                <h3 className="font-lora text-[19px] font-semibold text-sage mb-1.5">
                   {theme.title}
-                </h4>
-                <p className="text-sm font-light leading-[1.75] text-text-muted">
+                </h3>
+                <p className="text-[15px] font-light leading-[1.75] text-text-muted">
                   {theme.text}
                 </p>
               </div>
@@ -94,6 +93,6 @@ export default function Contemporary() {
           </div>
         </FadeUp>
       </div>
-    </section>
+    </Section>
   );
 }

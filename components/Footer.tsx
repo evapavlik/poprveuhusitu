@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer className="bg-text px-6 md:px-12 py-12 flex flex-col items-center gap-5 text-center">
       <span className="font-lora text-sm font-semibold text-white/70">
-        Husitská církev · CČSH
+        Poprvé u husitů
       </span>
 
       <nav className="flex flex-wrap justify-center gap-x-2 gap-y-2 text-[12px] text-white/55">

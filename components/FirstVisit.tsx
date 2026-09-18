@@ -1,4 +1,5 @@
 import FadeUp from "./FadeUp";
+import Section, { SectionLabel, NADPIS_1 } from "./Section";
 
 const icons = {
   candle: (
@@ -52,35 +53,33 @@ const cards = [
 
 export default function FirstVisit() {
   return (
-    <section className="py-[100px] px-6 md:px-12 bg-cream" id="bohosluzba">
+    <Section id="bohosluzba" tone="off-white" top="lg" bottom="md">
       <FadeUp>
-        <div className="inline-flex items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-brick mb-5 before:content-[''] before:w-5 before:h-0.5 before:bg-brick before:rounded-sm">
-          Na bohoslužbě
-        </div>
+        <SectionLabel>Na bohoslužbě</SectionLabel>
       </FadeUp>
       <FadeUp>
-        <h2 className="font-lora text-[clamp(30px,3.5vw,46px)] font-bold leading-[1.2] max-w-[560px] mb-14">
+        <h2 className={`${NADPIS_1} max-w-[560px] mb-14`}>
           Co vás čeká,
           <br />
-          když přijdete <em className="italic text-brick">poprvé.</em>
+          když přijdete poprvé.
         </h2>
       </FadeUp>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {cards.map((card, i) => (
           <FadeUp key={card.title} delay={i * 70}>
-            <div className="bg-white border border-border rounded-xl px-7 py-9 hover:shadow-[0_8px_30px_rgba(160,65,42,0.08)] hover:-translate-y-0.5 transition-all duration-[250ms]">
+            <div className="h-full bg-white border border-border rounded-xl px-7 py-9 hover:shadow-[0_8px_30px_rgba(196,30,30,0.08)] hover:-translate-y-0.5 transition-all duration-[250ms]">
               <div className="w-11 h-11 rounded-[10px] bg-brick-pale flex items-center justify-center text-brick mb-5">
                 {card.icon}
               </div>
-              <h3 className="font-lora text-lg font-semibold mb-2.5">{card.title}</h3>
-              <p className="text-sm font-light leading-[1.8] text-text-muted">
+              <h3 className="font-lora text-[19px] font-semibold mb-2.5">{card.title}</h3>
+              <p className="text-[15px] font-light leading-[1.75] text-text-muted">
                 {card.text}
               </p>
             </div>
           </FadeUp>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

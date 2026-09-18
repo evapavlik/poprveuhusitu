@@ -89,20 +89,73 @@ Speciální citáty:   Cormorant Garamond — italika pro velké citáty (Google
 - **Marquee band** pod hero sekcí — živá červená, klíčová slova v pohybu
 - Inspirace vizuálem: https://www.praya.app/farnost.html (struktura, ne barvy)
 
+### Rytmus stránky — ZÁVAZNÉ
+
+Pozadí se nestřídá po každé sekci. Tón pozadí říká, **která kapitola** právě běží;
+vlásková linka říká, že uvnitř kapitoly začíná další sekce.
+
+| Kapitola | Tón | Sekce |
+|---|---|---|
+| Kdo jsme a odkud | `white` | Kdo jsme, Karel Farský |
+| Co vás čeká | `off-white` | Co vás čeká poprvé, Proč dnes, Průvodce, FAQ |
+| Vstup a autorka | `cream` | Životní události, O tomto webu |
+
+Mezi kapitolami stojí **interpunkce** — sytá plocha, která dělá zlom:
+červený marquee pod hero, zelený citát Farského, `brick-pale` závěrečné CTA,
+tmavá patička. `sage-pale` zůstává jen pro box témat v sekci „Proč dnes".
+
+Tři pravidla, která platí bez výjimky:
+1. **Jedna osa.** Každá sekce jde přes `components/Section.tsx`, který drží
+   `max-w-[1180px] mx-auto`. Žádná sekce si šířku neřeší sama — dřív se text
+   při scrollování posouval do stran.
+2. **Dvě úrovně nadpisů.** `NADPIS_1` pro nosné sekce (Kdo jsme, Farský,
+   Co vás čeká, závěrečné CTA), `NADPIS_2` pro zbytek. Ne všechny sekce mají
+   stejnou váhu.
+3. **Červená kurzíva v nadpisu jen tam, kde nese sdělení.** Zůstává na čtyřech
+   místech (hero, Kdo jsme, Farský, CTA). Osmkrát na jedné stránce je manýra.
+
+### Typografická škála — ZÁVAZNÁ
+
+Jiné velikosti na stránce nepoužívat. Dřív jich bylo v oběhu deset (11, 13, 14,
+15, 16, 17, 19, 52 px) bez pravidla, podle čeho se vybírá.
+
+| Role | Velikost | Řez |
+|---|---|---|
+| Štítek nad nadpisem (`SectionLabel`) | 12 px | 600, verzálky, tracking .2em |
+| H1 | `clamp(40px,5.5vw,68px)` | 700 |
+| H2 nosné sekce (`NADPIS_1`) | `clamp(32px,4vw,50px)` | 700 |
+| H2 ostatní (`NADPIS_2`) | `clamp(26px,3vw,38px)` | 700 |
+| H3 / nadpis karty | 19 px | 600 |
+| Perex a hlavní text | 17 px | 300 |
+| Text v kartách a seznamech | 15 px | 300 |
+| Popisky, data, meta | 13 px | 500 |
+
+Odsazení sekcí je responzivní (`Section` prop `top` / `bottom`): na mobilu
+48–80 px, na desktopu 56–112 px. Pevných `py-[100px]` se na mobilu nedrží.
+
 ---
 
 ## Struktura stránky — sekce v pořadí
 
 ### 1. `<nav>` — Navigace
 - Fixní, bílá s backdrop-filter blur
-- Logo: „Husitská církev · CČSH" v Loře, červená
+- Logo: **„Poprvé u husitů"** v Loře, červená — lišta pojmenuje **web**, ne církev
 - Odkazy: Kdo jsme / Karel Farský / Bohoslužba / Dnes / Kontakt
 
 ### 2. `<hero>` — Hero sekce
-- Tag badge: „Církev československá husitská"
+- Datace nad nadpisem: „Církev československá husitská" (Lora, tmavá) +
+  „založena 11. ledna 1920 v chrámu sv. Mikuláše v Praze" (13 px, muted)
+- Datace je tmavá, ne červená: na mobilu stojí přímo pod červeným logem
+  v navigaci a nad červenou kurzívou v nadpisu. Tři červené prvky nad sebou
+  se přebíjely.
+- ⚠️ **Žádný badge s tečkou.** Pilulka s prostrkanými verzálkami a barevnou
+  tečkou je podpis šablony a neříká nic, co není v navigaci. Nevracet.
 - H1: „Víra, která se nebojí otázek."
 - Perex: krátký, přívětivý, pro hledající
-- CTA tlačítka: „Poznejte nás" (primary) + „Jak vypadá bohoslužba" (ghost)
+- CTA: **jedno** tlačítko „Jak vypadá bohoslužba" (→ `#bohosluzba`) + tichý
+  textový odkaz „Časté otázky →" (→ `#otazky`)
+- ⚠️ **Žádná dvojice „plné + obrysové tlačítko".** Je to podpis šablony.
+  Odkaz v hero nesmí mířit na sekci hned pod hero — to čtenář udělá scrollem.
 - Pozadí: off-white s jemnými radiálními gradienty (červená + sage)
 
 ### 3. Marquee band
@@ -156,7 +209,7 @@ Speciální citáty:   Cormorant Garamond — italika pro velké citáty (Google
 
 ### 13. Footer
 - Tmavý, jednoduchý
-- Logo text „Husitská církev · CČSH"
+- Logo text „Poprvé u husitů" — stejné jméno jako v liště
 - Disclaimer: „Soukromý projekt · Není oficiální stránkou CČSH" (odkaz na ccsh.cz)
 - ⚠️ **Žádné ®, ©, ani adresa sídla** — tohle je soukromá iniciativa, ne oficiální web
 
@@ -179,6 +232,7 @@ app/
   layout.tsx            # fonty, metadata
   globals.css           # CSS proměnné, base styles, marquee animace
 components/
+  Section.tsx           # kostra sekce (šířka, tón, odsazení) + SectionLabel + NADPIS_1/2
   Nav.tsx               # fixní navigace
   Hero.tsx              # hero sekce s CTA
   MarqueeBand.tsx       # červený marquee pás
@@ -212,6 +266,25 @@ CLAUDE.md               # tento soubor
 | souputníci | spojenci / společně |
 | nekáře | nebude kárat |
 | blahoslavenství (bez kontextu) | konkrétní popis čtení |
+
+### Název církve na první obrazovce — ZÁVAZNÉ
+
+Plný název církve stojí na úvodní obrazovce **právě jednou**, a to v dataci
+nad nadpisem. Dřív byl třikrát: v liště, v dataci a potřetí v perexu
+(„Husitská církev je otevřená všem…"). Každý slot má jinou práci:
+
+| Slot | Text | Co dělá |
+|---|---|---|
+| Lišta | Poprvé u husitů | říká, na jakém webu jsem |
+| Datace | Církev československá husitská | říká, o jaké církvi je řeč |
+| Perex | „Jsme otevření všem…" | mluví ke čtenáři, nepředstavuje se znovu |
+
+Web se jmenuje **Poprvé u husitů** (podle domény). Není to církev a v liště se
+za ni nevydává — patička říká, že oficiální stránkou CČSH není. `siteName`
+v OG metadatech je „Poprvé u husitů", `<title>` úvodní stránky je
+„Poprvé u husitů – Církev československá husitská" — obsahuje obě jména,
+takže záložka prohlížeče i výsledek ve vyhledávání říkají totéž, co je
+vidět v liště. Podstránky si drží vlastní titulky podle tématu.
 
 ### Jazyková pravidla
 - **Žádné archaismy** — text musí být srozumitelný pro člověka, který nikdy nebyl v kostele
