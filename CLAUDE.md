@@ -143,7 +143,10 @@ Odsazení sekcí je responzivní (`Section` prop `top` / `bottom`): na mobilu
 - Odkazy: Kdo jsme / Karel Farský / Bohoslužba / Dnes / Kontakt
 
 ### 2. `<hero>` — Hero sekce
-- Tag badge: „Církev československá husitská"
+- Datace nad nadpisem: „Církev československá husitská" (Lora, červená) +
+  „založena 11. ledna 1920 v chrámu sv. Mikuláše v Praze"
+- ⚠️ **Žádný badge s tečkou.** Pilulka s prostrkanými verzálkami a barevnou
+  tečkou je podpis šablony a neříká nic, co není v navigaci. Nevracet.
 - H1: „Víra, která se nebojí otázek."
 - Perex: krátký, přívětivý, pro hledající
 - CTA tlačítka: „Poznejte nás" (primary) + „Jak vypadá bohoslužba" (ghost)

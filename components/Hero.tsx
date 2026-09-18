@@ -28,9 +28,17 @@ export default function Hero() {
     <section className="px-6 md:px-12 pt-28 pb-20 md:pt-32 md:pb-28 bg-off-white">
       <div className="max-w-[1180px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 lg:items-center">
         <div>
-          <div className="inline-flex items-center gap-2.5 bg-brick-pale text-brick text-xs font-semibold tracking-[0.12em] uppercase px-4 py-2 rounded-full mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-brick shrink-0" />
-            Církev československá husitská
+          {/* Datace místo štítku s tečkou. Pilulka s prostrkanými verzálkami je
+              podpis šablony a neříkala nic, co není o kus výš v navigaci.
+              Datum a místo založení odpovídá na otázku, kterou má návštěvník
+              hned po „co to je za církev". */}
+          <div className="mb-8">
+            <p className="font-lora text-[17px] font-semibold text-brick leading-tight">
+              Církev československá husitská
+            </p>
+            <p className="text-[13px] font-light text-text-muted mt-1.5 tracking-[0.02em]">
+              založena 11. ledna 1920 v chrámu sv. Mikuláše v Praze
+            </p>
           </div>
 
           <h1 className="font-lora text-[clamp(40px,5.5vw,68px)] font-bold leading-[1.08] tracking-tight mb-6">
